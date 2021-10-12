@@ -1,0 +1,19 @@
+.wid{
+    width:400px
+}
+.heightt{
+    height:400px;
+    margin:0;
+    padding: 0;
+}
+.roundedd{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+}
+.height-card{
+    height: 400px !important;
+}
+.height-card-2{
+    height: 165px !important;
+}
