@@ -17,3 +17,115 @@
 .height-card-2{
     height: 165px !important;
 }
+
+.vector-image{
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 0px;
+    padding: 0px;
+    width: 600px;
+}
+
+.home-heading{
+    font-family: 'Dancing Script', sans-serif;
+    font-weight:400;
+    font-size: 60px;
+    margin-top: 150px;
+    margin-left: 40px;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.home-subheading{
+    font-family: 'Inter';
+    font-size: 50px;
+    margin-left: 40px;
+    margin-top: 0px;
+    padding: 0px;
+    font-weight:900;
+}
+
+.home-subsubheading{
+    padding: 0px;
+    margin-top: 0px;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: 40px;
+}
+
+a:link, a:visited {
+    margin-top: 10px;
+    margin-left: 42px;
+    color: black;
+    font-weight: 500;
+    font-size: 19px;
+    font-family: 'Inter';
+    border: 3px solid #fb7258;
+    padding: 9px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+  }
+
+a:hover {
+    background-color: rgba(251, 114, 88, 0.1);
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 1s;
+  
+}
+
+.align-horizontal{
+    display: flex;
+}
+
+hr{
+    border: none;
+    height: 55px;
+    color: grey;
+}
+
+.who-are-we{
+    letter-spacing: 0px;
+    word-spacing: 1px;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 50px;
+    margin-left: 60px;
+    margin-top: 60px;
+}
+
+.who-are-we-body{
+    line-height: 50px;
+    margin-left: 60px;
+    font-family: 'Inter';
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.trusted{
+    font-size: 30px;
+    margin-left: 140px;
+    margin-top: 20px;
+}
+
+.card{
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 350px;
+    height: 180px;
+    border-radius: 10px;
+    background-color: #eeeeee;
+}
+
+.pair-2{
+    margin-top: 20px;
+}
