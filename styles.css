@@ -19,18 +19,18 @@
 }
 
 .vector-image{
-    margin-top: 100px;
-    margin-left: 100px;
+    margin-top: 70px;
+    margin-left: 90px;
     margin-right: 0px;
     padding: 0px;
-    width: 600px;
+    width: 450px;
 }
 
 .home-heading{
     font-family: 'Dancing Script', sans-serif;
     font-weight:400;
     font-size: 60px;
-    margin-top: 150px;
+    margin-top: 100px;
     margin-left: 40px;
     padding: 0px;
     margin-bottom: 0px;
@@ -93,14 +93,14 @@ hr{
     font-weight: 700;
     font-size: 50px;
     margin-left: 60px;
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .who-are-we-body{
     line-height: 50px;
     margin-left: 60px;
     font-family: 'Inter';
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -113,19 +113,55 @@ hr{
 .card{
     border: none;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 20px;
     padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 70px;
     padding-top: 50px;
     padding-bottom: 50px;
     margin-bottom: 20px;
     margin-top: 10px;
-    width: 350px;
-    height: 180px;
+    width: 300px;
+    height: 160px;
     border-radius: 10px;
     background-color: #eeeeee;
 }
 
 .pair-2{
     margin-top: 20px;
+}
+
+.popular-locations{
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    float: left;
+    align-items: flex-end;
+}
+
+.location{
+    padding: 0px;
+    margin-left: 6px;
+    margin-bottom: 2px;
+    font-size: smaller;
+    
+}
+
+.connect{
+    margin-top: 10px;
+    margin-right: 50px;
+    position: relative;
+    float: right;
+    align-items: flex-end;
+    
+}
+
+.connect-images{
+    position: relative;
+    float: right;
+}
+
+.connect-logo{
+    width: 25px;
+    margin-left: 5px;
 }
