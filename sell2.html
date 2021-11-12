@@ -70,122 +70,119 @@
               id="Account"
               role="button"
               data-bs-toggle="modal"
-              data-bs-target="#exampleModal2"
+              data-bs-target="#exampleModal"
             >
-              Sign Up
+              Sign In
             </a>
-            <div
-              class="modal fade"
-              id="exampleModal2"
-              data-bs-backdrop="static"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-body">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col mx-auto p-auto">
-                          <div class="card border-0 shadow rounded-3">
-                            <button type="button " class="btn-close ms-2 mt-2" aria-label="Close"></button>
-                            <div class="card-body">
-                              <h5 class="card-title text-center">Sign Up</h5>
-                              <br />
-                              <form>
-                                <div class="form-floating mb-3">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="floatingName"
-                                    placeholder="Name"
-                                  />
-                                  <label for="floatingInput">Name</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                  <input
-                                    type="email"
-                                    class="form-control"
-                                    id="floatingInput"
-                                    placeholder="name@example.com"
-                                  />
-                                  <label for="floatingInput"
-                                    >Email address</label
-                                  >
-                                </div>
-                                <div class="form-floating mb-3">
-                                  <input
-                                    type="password"
-                                    class="form-control"
-                                    id="floatingPassword1"
-                                    placeholder="Set Password"
-                                  />
-                                  <label for="floatingPassword"
-                                    >Set Password</label
-                                  >
-                                </div>
-                                <div class="form-floating mb-3">
-                                  <input
-                                    type="password"
-                                    class="form-control"
-                                    id="floatingPassword2"
-                                    placeholder="Confirm Password"
-                                  />
-                                  <label for="floatingPassword"
-                                    >Confirm Password</label
-                                  >
-                                </div>
-
-                                <div class="d-grid">
-                                  <button
-                                    class="
-                                      btn btn-primary btn-login
-                                      text-uppercase
-                                      fw-bold
-                                    "
-                                    type="submit"
-                                  >
-                                    Sign Up
-                                  </button>
-                                  <p>
-                                    Have an account ? <a href="">Sign In</a>
-                                  </p>
-                                </div>
-                                <hr class="my-4" />
-                                <div class="d-grid mb-2">
-                                  <button
-                                    class="
-                                      btn btn-google btn-login
-                                      text-uppercase
-                                      fw-bold
-                                    "
-                                    type="submit"
-                                  >
-                                    <i class="fab fa-google me-2"></i> Sign Up
-                                    with Google
-                                  </button>
-                                </div>
-                                <div class="d-grid">
-                                  <button
-                                    class="
-                                      btn btn-facebook btn-login
-                                      text-uppercase
-                                      fw-bold
-                                    "
-                                    type="submit"
-                                  >
-                                    <i class="fab fa-facebook-f me-2"></i> Sign
-                                    Up with Facebook
-                                  </button>
-                                </div>
-                              </form>
+                      <div class="container">
+                          <div class="row">
+                            <div class="col mx-auto p-auto">
+                              <div class="card border-0 shadow rounded-3">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="card-body ">
+                                  <h5 class="card-title text-center ">Sign In</h5><br>
+                                  <form>
+                                    <div class="form-floating mb-3">
+                                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                      <label for="floatingInput">Email address</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                      <label for="floatingPassword">Password</label>
+                                    </div>
+                      
+                                    <div class="form-check mb-3">
+                                      <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                                      <label class="form-check-label" for="rememberPasswordCheck">
+                                        Remember password
+                                      </label>
+                                    </div>
+                                    <div class="d-grid">
+                                      <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Sign
+                                        in</button>
+                                        <p>Don't have an account ? <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal2" >Sign Up</a></p>
+                                    </div>
+                                    <hr class="my-4">
+                                    <div class="d-grid mb-2">
+                                      <button class="btn btn-google btn-login text-uppercase fw-bold" type="submit">
+                                        <i class="fab fa-google me-2"></i> Sign in with Google
+                                      </button>
+                                    </div>
+                                    <div class="d-grid">
+                                      <button class="btn btn-facebook btn-login text-uppercase fw-bold" type="submit">
+                                        <i class="fab fa-facebook-f me-2"></i> Sign in with Facebook
+                                      </button>
+                                    </div>
+                                  </form>
+                                </div> 
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
                   </div>
+          
+                </div>
+              </div>
+            </div>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                      <div class="container">
+                          <div class="row">
+                            <div class="col mx-auto p-auto">
+                              <div class="card border-0 shadow rounded-3">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="card-body "> 
+                                  <h5 class="card-title text-center ">Sign Up</h5><br>
+                                  <form>
+                                      <div class="form-floating mb-3">
+                                          <input type="text" class="form-control" id="floatingName" placeholder="Name">
+                                          <label for="floatingInput">Name</label>
+                                        </div>
+                                    <div class="form-floating mb-3">
+                                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                      <label for="floatingInput">Email address</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                      <input type="password" class="form-control" id="floatingPassword1" placeholder="Set Password">
+                                      <label for="floatingPassword">Set Password</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                      <input type="password" class="form-control" id="floatingPassword2" placeholder="Confirm Password">
+                                      <label for="floatingPassword">Confirm Password</label>
+                                    </div>
+                      
+                                    <div class="d-grid">
+                                      <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Sign
+                                        Up</button>
+                                        <p>Have an account ? <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign In</a></p>
+                                    </div>
+                                    <hr class="my-4">
+                                    <div class="d-grid mb-2">
+                                      <button class="btn btn-google btn-login text-uppercase fw-bold" type="submit">
+                                        <i class="fab fa-google me-2"></i> Sign Up with Google
+                                      </button>
+                                    </div>
+                                    <div class="d-grid">
+                                      <button class="btn btn-facebook btn-login text-uppercase fw-bold" type="submit">
+                                        <i class="fab fa-facebook-f me-2"></i> Sign Up with Facebook
+                                      </button>
+                                    </div>
+                                  </form>
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+          
                 </div>
               </div>
             </div>
