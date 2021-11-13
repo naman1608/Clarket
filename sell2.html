@@ -81,7 +81,18 @@
             >
               Sign In
             </a>
-            <button class="logged-in" id="logoutbutton">Username</button>
+
+            <div class="dropdown show">
+              <a class="btn btn-secondary dropdown-toggle logged-in" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Aaryan Mattoo
+              </a>
+            
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="user_account.html">Profile</a>
+                <a class="dropdown-item" href="#" id="logoutbutton">Logout</a>
+              </div>
+            </div>
+
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -93,7 +104,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 <div class="card-body ">
                                   <h5 class="card-title text-center ">Sign In</h5><br>
-                                  <form>
+                                  <form id="loginform">
                                     <div class="form-floating mb-3">
                                       <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                                       <label for="floatingInput">Email address</label>
@@ -110,7 +121,7 @@
                                       </label>
                                     </div>
                                     <div class="d-grid">
-                                      <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Sign
+                                      <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit" data-bs-dismiss="modal">Sign
                                         in</button>
                                         <p>Don't have an account ? <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal2" >Sign Up</a></p>
                                     </div>

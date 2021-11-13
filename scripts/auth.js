@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-analytics.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -48,7 +48,6 @@ signupForm.addEventListener('submit', (e) => {
 
   const modal = document.querySelector('#exampleModal2');
   console.log(modal);
-  var instance 
   M.Modal.instance(modal).close();
   signupForm.reset();
   // ...
@@ -67,5 +66,25 @@ logout.addEventListener('click', (e) => {
   e.preventDefault();
   auth.signOut().then(() => {
     console.log('signed out');
+  });
+})
+
+
+const loginForm = document.querySelector('#loginform');
+loginForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const email = loginForm['floatingInput'].value;
+  const password = loginForm['floatingPassword'].value;
+
+  signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
   });
 })
