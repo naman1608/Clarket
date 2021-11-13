@@ -24,6 +24,10 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
+auth.onAuthStateChanged(user =>{
+  setupUI(user);
+})
+
 const signupForm = document.querySelector('#signupform');
 
 signupForm.addEventListener('submit', (e) => {
@@ -53,5 +57,15 @@ signupForm.addEventListener('submit', (e) => {
     const errorMessage = error.message;
     console.log(errorCode, errorMessage);
     // ..
+  });
+})
+
+
+const logout = document.querySelector('#logoutbutton');
+
+logout.addEventListener('click', (e) => {
+  e.preventDefault();
+  auth.signOut().then(() => {
+    console.log('signed out');
   });
 })
