@@ -61,7 +61,14 @@
             aria-label="Search"
           />
         </form>
-        <button class="btn nav-item cbtn me-auto">SELL</button>
+        <button class="btn nav-item cbtn me-auto" id="sell-btn">SELL</button>
+
+        <script type="text/javascript">
+          document.getElementById("sell-btn").onclick = function () {
+              location.href = "sell_form.html";
+          };
+        </script>
+        
         <ul class="navbar-nav">
           <li class="nav-item me-1">
             <a

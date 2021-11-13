@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <style>
+      .image-preview {
+        width: 300px;
+        min-height: 100px;
+        border: 2px solid rgba(223, 207, 207, 0.867);
+        margin-top: 15px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: rgba(236, 213, 213, 0.867);
+      }
+
+      .image-preview__image {
+        display: none;
+        width: 100%;
+      }
+
+      body {
+        background: linear-gradient(to right,#01a9ac,#01dbdf);
+      }
+
+      .form {
+        border-radius: 3%;
+        position: flex;
+        margin-top: 15%;
+        margin: auto;
+        width: fit-content;
+        padding: 5%;
+        background-color: rgb(253, 253, 253);
+        align-items: center;
+      }
+
+      #slct1, #slct2 {
+        width : 100%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <div class="headingDiv">
+        <h1 class="heading">Place your Product</h1>
+        <hr>
+      </div>
+      <form id="sellForm">
+        <label for="slct1">Choose Product Category</label>
+        <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
+          <option value="furniture">Furniture</option>
+          <option value="electronics">Electronics</option>
+          <option value="books">Books</option>
+          <option value="beddings">Beddings</option>
+          <option value="bathroom accessories">Bathroom Accessories</option>
+          <option value="kitchen accessories">
+            Kitchen Accessories
+          </option></select
+        ><br />
+
+        <label for="slct2">Choose Product</label>
+        <select id="slct2" name="slct2"></select
+        ><br />
+        <br>
+        
+        <table>
+            <tr>
+                <td>
+                    <label for="adTitle">Title</label>
+                </td>
+                <td>
+                    <input type="text" name="adTitle" required /><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="adDescription">Description</label>
+                </td>
+                <td>
+                    <input type="text" name="adDescription" required /><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="adPrice">Price</label>
+                </td>
+                <td>
+                    <input type="number" value="adPrice" required /><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="adPhone">Phone Number</label>
+                </td>
+                <td>
+                    <input type="number" id="adPhone" required /><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="adTitle">Seller Name</label>
+                </td>
+                <td>
+                    <input type="text" name="adTitle" required /><br />
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <label for="adImage">Product Image</label>
+                </td>
+                <td>
+                    <input type="file" name="inpFile" id="inpFile" /><br />
+                </td>
+            </tr>
+        </table>
+
+        <div class="image-preview" id="imagePreview">
+          <span class="image-preview__default-text">Image Preview</span>
+          <img src="" alt="Image Preview" class="image-preview__image" />
+        </div>
+        <br>
+        <input class="btn btn-primary" type="submit" value="Add" />
+      </form>
+    </div>
+
+    <script>
+      const inpFile = document.getElementById("inpFile");
+      const previewContainer = document.getElementById("imagePreview");
+      const previewImage = previewContainer.querySelector(
+        ".image-preview__image"
+      );
+      const previewDefaultText = previewContainer.querySelector(
+        ".image-preview__default-text"
+      );
+
+      inpFile.addEventListener("change", function () {
+        const file = this.files[0];
+        console.log(file);
+
+        if (file) {
+          const reader = new FileReader();
+          previewDefaultText.style.display = "none";
+          previewImage.style.display = "block";
+
+          reader.addEventListener("load", function () {
+            previewImage.setAttribute("src", this.result);
+          });
+
+          reader.readAsDataURL(file);
+        } else {
+          previewDefaultText.style.display = null;
+          previewImage.style.display = null;
+          previewImage.setAttribute("src", "");
+        }
+      });
+
+      function populate(s1, s2) {
+        var s1 = document.getElementById(s1);
+        var s2 = document.getElementById(s2);
+
+        var optionsArr = [];
+        s2.innerHTML = "";
+
+        if (s1.value == "furniture") {
+          optionsArr = [
+            "table|Table",
+            "chair|Chair",
+            "almirah|Almirah",
+            "bed|Bed",
+          ];
+        } else if (s1.value == "electronics") {
+          optionsArr = [
+            "mobile|Mobile",
+            "laptop|Laptop",
+            "headphone|Headphone",
+            "charger|Charger",
+            "cable|Cable",
+            "powerbank|Powerbank",
+          ];
+        } else if (s1.value == "books") {
+          optionsArr = [
+            "sem1|Semester1",
+            "sem2|Semester2",
+            "sem3|Semester3",
+            "sem4|Semester4",
+            "sem5|Semester5",
+            "sem6|Semester6",
+            "sem7|Semester7",
+            "sem8|Semester8",
+          ];
+        } else if (s1.value == "beddings") {
+          optionsArr = [
+            "bedsheet|Bedsheet",
+            "pillow|Pillow",
+            "curtains|Curtains",
+            "blanket|Blanket",
+          ];
+        } else if (s1.value == "bathroom accessories") {
+          optionsArr = [
+            "tub|Tub",
+            "mug|Mug",
+            "laundary basket|Laundary Basket",
+            "heating rod|Heating Rod",
+          ];
+        } else if (s1.value == "kitchen accessories") {
+          optionsArr = [
+            "induction|Induction",
+            "kettle|Kettle",
+            "utensils|Utensils",
+          ];
+        }
+
+        for (var option in optionsArr) {
+          var pair = optionsArr[option].split("|");
+          var newOption = document.createElement("option");
+          newOption.value = pair[0];
+          newOption.innerHTML = pair[1];
+          s2.options.add(newOption);
+        }
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
