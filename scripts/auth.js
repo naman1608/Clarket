@@ -31,10 +31,10 @@ const setupUI = (userCredential) => {
     if(userCredential) {
         console.log("setupui user");
         console.log(userCredential);
-        const dropdownmenu = document.getElementById('dropdownMenuLink');
-        const curr = userCredential.displayName;
-        console.log(curr);
-        dropdownmenu.innerHTML = curr;
+        //const dropdownmenu = document.getElementById('dropdownMenuLink');
+        //const curr = userCredential.displayName;
+        //console.log(curr);
+        //dropdownmenu.innerHTML = curr;
         console.log("logged-in");
         console.log(loggedinelements);
         console.log(loggedoutelements);
@@ -111,9 +111,9 @@ loginForm.addEventListener('submit', (e) => {
   .then((userCredential) => {
     // Signed in 
     console.log(userCredential);
-    const user = userCredential.user;
-    const dropdownmenu = document.getElementById('dropdownMenuLink');
-    dropdownmenu.innerHTML = user.displayName;
+    //const user = userCredential.user;
+    //const dropdownmenu = document.getElementById('dropdownMenuLink');
+    //dropdownmenu.innerHTML = user.displayName;
     // ...
   })
   .catch((error) => {
