@@ -44,7 +44,13 @@ signupForm.addEventListener('submit', (e) => {
   createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
   // Signed in 
   const user = userCredential.user;
+  user.displayName = name;
+  const dropdownmenu = document.getElementById('dropdownMenuLink');
+  dropdownmenu.innerHTML = name;
+  console.log(user.displayName);
   console.log(userCredential);
+  console.log("sign up done");
+
 
   const modal = document.querySelector('#exampleModal2');
   console.log(modal);
@@ -80,7 +86,10 @@ loginForm.addEventListener('submit', (e) => {
   signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
+    console.log(userCredential);
     const user = userCredential.user;
+    const dropdownmenu = document.getElementById('dropdownMenuLink');
+    dropdownmenu.innerHTML = user.displayName;
     // ...
   })
   .catch((error) => {
