@@ -33,6 +33,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="styless.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Clarket</title>
   </head>
   <body>
@@ -93,7 +94,7 @@
               </div>
             </div>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-body">
@@ -123,7 +124,7 @@
                                     <div class="d-grid">
                                       <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit" data-bs-dismiss="modal">Sign
                                         in</button>
-                                        <p>Don't have an account ? <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal2" >Sign Up</a></p>
+                                        <p>Don't have an account ? <a href="" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal2"  data-dissmiss="modal">Sign Up</a></p>
                                     </div>
                                     <hr class="my-4">
                                     <div class="d-grid mb-2">
@@ -149,7 +150,7 @@
             </div>
             
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-body">
@@ -181,7 +182,7 @@
                                     <div class="d-grid">
                                       <button class="btn btn-primary btn-login text-uppercase fw-bold" data-bs-dismiss="modal" type="submit">Sign
                                         Up</button>
-                                        <p>Have an account ? <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign In</a></p>
+                                        <p>Have an account ? <a href="" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal" >Sign In</a></p>
                                     </div>
                                     <hr class="my-4">
                                     <div class="d-grid mb-2">
@@ -213,6 +214,17 @@
           </li>
         </ul>
       </div>
+
+      <script>
+        // $('[data-bs-toggle="modal"]').on('click', function() { 
+    
+        //   $('.modal').not($(this).data('bs-target')).modal('hide');
+
+        // });
+      </script>
+
+
+
     </nav>
     <div class="container-xxl bg-light mt-3">
 
