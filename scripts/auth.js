@@ -3,8 +3,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-analytics.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -18,7 +16,6 @@ const firebaseConfig = {
   measurementId: "G-JL8E9517PG"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
@@ -53,8 +50,9 @@ auth.onAuthStateChanged(user =>{
 })
 
 const signupForm = document.querySelector('#signupform');
+const signupButton = document.getElementById('signupbutton');
 
-signupForm.addEventListener('submit', (e) => {
+signupButton.addEventListener('click', (e) => {
   e.preventDefault();
 
   const name = signupForm['floatingName'].value;
@@ -121,3 +119,31 @@ loginForm.addEventListener('submit', (e) => {
     const errorMessage = error.message;
   });
 })
+
+import { signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
+
+const provider = new GoogleAuthProvider();
+
+signInWithPopup(auth, provider)
+  .then((result) => {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    // The signed-in user info.
+    const user = result.user;
+    // ...
+  }).catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    const email = error.email;
+    const credential = GoogleAuthProvider.credentialFromError(error);
+  });
+
+  const googlesignup = document.getElementById('signupgoogle');
+
+  googlesignup.addEventListener('click',(e) => {
+    firebaseConfig.auth().signInWithPopup(provider).then(res=>{
+      console.log(res);
+    }).catch(e=>{
+      console.log(e);})
+  })
