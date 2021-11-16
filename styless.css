@@ -5,7 +5,12 @@ input[type=number]::-webkit-outer-spin-button {
     appearance: none;
     margin: 0; 
 }
-
+.shd{
+  box-shadow: 2px 2px 2px #E5E5E5;
+}
+.hs{
+  height: 70px;
+}
 .nopadding{
   margin: 0!important;
   padding: 0!important;
@@ -15,14 +20,19 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .home-heading{
     font-family: 'Dancing Script', sans-serif !important;
-    font-size:2rem;
+    font-size:3rem;
 }
 .cbtn{
     font-size: 1.5rem;
     border: 3px solid #fb7258 !important;
-    border-radius: 10px;
-    width: 100px;
+    border-radius: 20px;
+    width: 125px;
   
+}
+.cbtn:hover{
+  background-color: rgba(251, 114, 88, 0.1);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 1s;
 }
 .bh{
   background-color: #fb7258 !important;
@@ -45,6 +55,22 @@ input[type=range]::-webkit-slider-runnable-track {
   background: #E0D1D9;
   border-radius: 1px;
   border: 0px solid #000000;
+}
+.dispTags{
+  padding: 10px;
+  background-color: whitesmoke;
+  margin-top: 10px;
+  height: 100px;
+  border-radius: 10px;
+}
+.fmr{
+  height: 40px;
+  border: 0px;
+  border-radius: 10px;
+}
+.tgs{
+  padding: 5px;
+  margin: 5px !important;
 }
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 0px 0px 0px #000000;
@@ -69,6 +95,9 @@ input[type=range]::-moz-range-track {
   /* background: #E0D1D9; */
   border-radius: 1px;
   border: 0px solid #000000;
+}
+.fnt{
+  font-family: 'Open Sans',sans-serif;
 }
 input[type=range]::-moz-range-thumb {
   box-shadow: 0px 0px 0px #000000;
@@ -155,10 +184,7 @@ input[type=number] {text-align: center;}
       outline:none;
   }
   
-  #Account:hover{
-   background-color: #ea4335;
-   color: white;
-  }
+ 
   .cbtn:hover{
     background-color: #ea4335;
     color: white;
@@ -169,8 +195,22 @@ input[type=number] {text-align: center;}
   }
   .bi{
     color: #fb7258;
+    
   }
+  
+  .bii{
+    color: #E5E5E5;
+    background-color: #000000;
+  }
+  .bii:hover{
+    color: #fb7258;
+  }
+  
   .bs{
-    background-color: grey !important;
+    background-color:#AAAAAA !important;
+    border-radius: 100px !important;
+    padding :4px 9px 4px 9px  !important;
+    font-weight:normal  !important;
+
   }
   
