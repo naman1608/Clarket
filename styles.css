@@ -26,8 +26,17 @@
       position: absolute;
       top: 180px;
       right: -190px;
-      opacity: 0.8;
+      opacity: 0.9;
 
+  }
+
+  .second-bg-image{
+      z-index: -2;
+      position: absolute;
+      top: 800px;
+      left: -300px;
+      opacity: 0.5;
+      transform: rotate(180deg);
   }
 
   .wid {
@@ -146,20 +155,21 @@
     border: none;
     margin-left: 10px;
     margin-right: 20px;
-    padding-left: 30px;
-    padding-right: 70px;
+    padding-left: 10px;
+    padding-right: 20px;
     padding-top: 50px;
     padding-bottom: 50px;
     margin-bottom: 20px;
     margin-top: 10px;
-    width: 300px;
     height: 160px;
+    width: 250px;
     border-radius: 10px;
     background-color: #eeeeee;
   }
   
   .pair-2 {
     margin-top: 20px;
+    margin-right: 50px;
   }
   
   .popular-locations {
