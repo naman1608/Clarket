@@ -120,7 +120,7 @@ loginForm.addEventListener('submit', (e) => {
   });
 })
 
-import { signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
+/*import { signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
 
 const provider = new GoogleAuthProvider();
 
@@ -146,4 +146,4 @@ signInWithPopup(auth, provider)
       console.log(res);
     }).catch(e=>{
       console.log(e);})
-  })
+  })*/

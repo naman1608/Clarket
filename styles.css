@@ -1,66 +1,89 @@
-.wid{
-    width:400px
-}
-.heightt{
-    height:400px;
-    margin:0;
+.site-header {
+    position: relative;
+    padding: 24px 0;
+    z-index: 2;
+  }
+  .site-header::before {
+    content: "";
+    position: absolute;
+    top: -140px;
+    right: -100px;
+    width: 1440px;
+    height: 324px;
+    z-index: 2;
+    background-image: url("assets/header-illustration-light.svg");
+  }
+  .site-header-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .wid {
+    width: 400px;
+  }
+  .heightt {
+    height: 400px;
+    margin: 0;
     padding: 0;
-}
-.roundedd{
+  }
+  .roundedd {
     height: 40px;
     width: 40px;
     border-radius: 100%;
-}
-.height-card{
+  }
+  .height-card {
     height: 400px !important;
-}
-.height-card-2{
+  }
+  .height-card-2 {
     height: 165px !important;
-}
-
-.vector-image{
-    margin-top: 70px;
-    margin-left: 90px;
+  }
+  
+  .vector-image {
+    margin-top: 30px;
+    margin-left: 140px;
     margin-right: 0px;
     padding: 0px;
     width: 450px;
-}
-
-.home-heading{
-    font-family: 'Dancing Script', sans-serif;
-    font-weight:400;
+  }
+  
+  .home-heading {
+    font-family: "Dancing Script", sans-serif;
+    font-weight: 400;
     font-size: 60px;
-    margin-top: 100px;
+    margin-top: 60px;
     margin-left: 40px;
     padding: 0px;
     margin-bottom: 0px;
-}
-
-.home-subheading{
-    font-family: 'Inter';
+  }
+  
+  .home-subheading {
+    font-family: "Inter";
     font-size: 50px;
     margin-left: 40px;
     margin-top: 0px;
     padding: 0px;
-    font-weight:900;
-}
-
-.home-subsubheading{
+    font-weight: 900;
+  }
+  
+  .home-subsubheading {
     padding: 0px;
     margin-top: 0px;
-    font-family: 'Open Sans',sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 24px;
     font-weight: 400;
     margin-left: 40px;
-}
-
-a:link, a:visited {
+  }
+  
+  a:link,
+  a:visited {
     margin-top: 10px;
     margin-left: 42px;
     color: black;
     font-weight: 500;
     font-size: 19px;
-    font-family: 'Inter';
+    font-family: "Inter";
     border: 3px solid #fb7258;
     padding: 9px 28px;
     text-align: center;
@@ -68,49 +91,48 @@ a:link, a:visited {
     display: inline-block;
     border-radius: 10px;
   }
-
-a:hover {
+  
+  a:hover {
     background-color: rgba(251, 114, 88, 0.1);
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 1s;
+  }
   
-}
-
-.align-horizontal{
+  .align-horizontal {
     display: flex;
-}
-
-hr{
+  }
+  
+  hr {
     border: none;
     height: 55px;
     color: grey;
-}
-
-.who-are-we{
+  }
+  
+  .who-are-we {
     letter-spacing: 0px;
     word-spacing: 1px;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-weight: 700;
     font-size: 50px;
     margin-left: 60px;
     margin-top: 20px;
-}
-
-.who-are-we-body{
+  }
+  
+  .who-are-we-body {
     line-height: 50px;
     margin-left: 60px;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-size: 20px;
     font-weight: 400;
-}
-
-.trusted{
+  }
+  
+  .trusted {
     font-size: 30px;
     margin-left: 140px;
     margin-top: 20px;
-}
-
-.card{
+  }
+  
+  .card {
     border: none;
     margin-left: 10px;
     margin-right: 20px;
@@ -124,44 +146,43 @@ hr{
     height: 160px;
     border-radius: 10px;
     background-color: #eeeeee;
-}
-
-.pair-2{
+  }
+  
+  .pair-2 {
     margin-top: 20px;
-}
-
-.popular-locations{
+  }
+  
+  .popular-locations {
     margin-top: 10px;
     margin-left: 50px;
     margin-bottom: 20px;
     position: relative;
     float: left;
     align-items: flex-end;
-}
-
-.location{
+  }
+  
+  .location {
     padding: 0px;
     margin-left: 6px;
     margin-bottom: 2px;
     font-size: smaller;
-    
-}
-
-.connect{
+  }
+  
+  .connect {
     margin-top: 10px;
     margin-right: 50px;
     position: relative;
     float: right;
     align-items: flex-end;
-    
-}
-
-.connect-images{
+  }
+  
+  .connect-images {
     position: relative;
     float: right;
-}
-
-.connect-logo{
+  }
+  
+  .connect-logo {
     width: 25px;
     margin-left: 5px;
-}
+  }
+  
