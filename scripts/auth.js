@@ -1,6 +1,4 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-analytics.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore.js";
 
@@ -17,7 +15,6 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
@@ -26,15 +23,9 @@ const loggedoutelements = document.querySelectorAll('.logged-out');
 
 const setupUI = (userCredential) => {
     if(userCredential) {
-        console.log("setupui user");
-        console.log(userCredential);
         //const dropdownmenu = document.getElementById('dropdownMenuLink');
         //const curr = userCredential.displayName;
-        //console.log(curr);
         //dropdownmenu.innerHTML = curr;
-        console.log("logged-in");
-        console.log(loggedinelements);
-        console.log(loggedoutelements);
         loggedinelements.forEach(element => element.style.display = "block");
         loggedoutelements.forEach(element => element.style.display = "none");
     }
@@ -54,31 +45,17 @@ const signupButton = document.getElementById('signupbutton');
 
 signupButton.addEventListener('click', (e) => {
   e.preventDefault();
-
   const name = signupForm['floatingName'].value;
   const email = signupForm['floatingInput'].value;
   const password = signupForm['floatingPassword1'].value;
 
-  console.log(name);
-  console.log(email);
-  console.log(password);
-
   createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
-  // Signed in 
+
   const user = userCredential.user;
   user.displayName = name;
   const dropdownmenu = document.getElementById('dropdownMenuLink');
   dropdownmenu.innerHTML = name;
-  console.log(user.displayName);
-  console.log(userCredential);
-  console.log("sign up done");
-
-
-  const modal = document.querySelector('#exampleModal2');
-  console.log(modal);
-  M.Modal.instance(modal).close();
   signupForm.reset();
-  // ...
   }).catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
@@ -86,7 +63,6 @@ signupButton.addEventListener('click', (e) => {
     // ..
   });
 })
-
 
 const logout = document.querySelector('#logoutbutton');
 
@@ -119,6 +95,51 @@ loginForm.addEventListener('submit', (e) => {
     const errorMessage = error.message;
   });
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*import { signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
 

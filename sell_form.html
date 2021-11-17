@@ -131,7 +131,7 @@ margin: auto;
       </div>
       <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
         <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-          <h1><a href="http://blog.stackfindover.com/" rel="dofollow">Place Your Product...</a></h1>
+          <h1><a href="#" rel="dofollow">Place Your Product...</a></h1>
         </div>
         <div class="formbg-outer">
           <div class="formbg">
@@ -209,103 +209,7 @@ margin: auto;
       </div>
     </div>
   </div>
-  <script>
-    const inpFile = document.getElementById("inpFile");
-    const previewContainer = document.getElementById("imagePreview");
-    const previewImage = previewContainer.querySelector(
-      ".image-preview__image"
-    );
-    const previewDefaultText = previewContainer.querySelector(
-      ".image-preview__default-text"
-    );
-
-    inpFile.addEventListener("change", function () {
-      const file = this.files[0];
-      console.log(file);
-
-      if (file) {
-        const reader = new FileReader();
-        previewDefaultText.style.display = "none";
-        previewImage.style.display = "block";
-
-        reader.addEventListener("load", function () {
-          previewImage.setAttribute("src", this.result);
-        });
-
-        reader.readAsDataURL(file);
-      } else {
-        previewDefaultText.style.display = null;
-        previewImage.style.display = null;
-        previewImage.setAttribute("src", "");
-      }
-    });
-
-    function populate(s1, s2) {
-      var s1 = document.getElementById(s1);
-      var s2 = document.getElementById(s2);
-
-      var optionsArr = [];
-      s2.innerHTML = "";
-
-      if (s1.value == "furniture") {
-        optionsArr = [
-          "table|Table",
-          "chair|Chair",
-          "almirah|Almirah",
-          "bed|Bed",
-        ];
-      } else if (s1.value == "electronics") {
-        optionsArr = [
-          "mobile|Mobile",
-          "laptop|Laptop",
-          "headphone|Headphone",
-          "charger|Charger",
-          "cable|Cable",
-          "powerbank|Powerbank",
-        ];
-      } else if (s1.value == "books") {
-        optionsArr = [
-          "sem1|Semester 1",
-          "sem2|Semester 2",
-          "sem3|Semester 3",
-          "sem4|Semester 4",
-          "sem5|Semester 5",
-          "sem6|Semester 6",
-          "sem7|Semester 7",
-          "sem8|Semester 8",
-        ];
-      } else if (s1.value == "beddings") {
-        optionsArr = [
-          "bedsheet|Bedsheet",
-          "pillow|Pillow",
-          "curtains|Curtains",
-          "blanket|Blanket",
-        ];
-      } else if (s1.value == "bathroom accessories") {
-        optionsArr = [
-          "tub|Tub",
-          "mug|Mug",
-          "laundry basket|Laundry Basket",
-          "heating rod|Heating Rod",
-        ];
-      } else if (s1.value == "kitchen accessories") {
-        optionsArr = [
-          "induction|Induction",
-          "kettle|Kettle",
-          "utensils|Utensils",
-        ];
-      }
-
-      for (var option in optionsArr) {
-        var pair = optionsArr[option].split("|");
-        var newOption = document.createElement("option");
-        newOption.value = pair[0];
-        newOption.innerHTML = pair[1];
-        s2.options.add(newOption);
-      }
-    }
-  </script>
-
+  <script src="scripts/index.js"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
