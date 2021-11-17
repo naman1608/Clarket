@@ -33,9 +33,16 @@
   .second-bg-image{
       z-index: -2;
       position: absolute;
-      top: 800px;
+      top: 950px;
       left: -300px;
-      opacity: 0.5;
+      opacity: 1;
+      transform: rotate(180deg);
+  }
+
+  .bottom-hero-image{
+      position: absolute;
+      top: 1140px;
+      left: 1060px;
       transform: rotate(180deg);
   }
 
@@ -206,3 +213,39 @@
     margin-left: 5px;
   }
   
+  .slidebutton{
+      color: black;
+  }
+
+  .reviewimage{
+      opacity: 0;
+      height: 200px;
+      width: 50px;
+  }
+
+  .carousel-caption{
+    color: black;
+  }
+
+  .user-icon-image{
+      z-index: 2;
+      position: relative;
+      height: 120px;
+      width: 120px;
+      border-radius: 100px;
+      left: 615px;
+      top: 56px;
+      align-items: center;
+      align-self: center;
+      border: 3px solid #555555;
+  }
+
+  .carousel-control-next-icon{
+      z-index: 2;
+      color: black;
+  }
+
+  .carousel-control-prev-icon{
+      z-index: 2;
+      color: black;
+  }

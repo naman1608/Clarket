@@ -285,7 +285,7 @@ input[type="number"] {
     font-size: 22px;
     font-family: "Inter";
     border: 3px solid #fb7258;
-    padding: 12px 50px;
+    padding: 12px 45px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -299,5 +299,5 @@ input[type="number"] {
     transition-duration: 1s;
   }
 .cart2{
-    padding: 11px 60px;
+    padding: 11px 55px;
 }
