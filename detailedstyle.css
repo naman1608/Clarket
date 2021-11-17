@@ -3,7 +3,7 @@ body {
   background-color: #fbfbfb;
 }
 .main_container {
-  margin: 15vh;
+  margin: 12vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -60,7 +60,7 @@ body {
   font-weight: 500;
 }
 .heading3 {
-  font-size: larger;
+  font-size: 20px;
   color: black;
 }
 input[type="number"]::-webkit-inner-spin-button,
@@ -284,20 +284,27 @@ input[type="number"] {
     font-weight: 500;
     font-size: 22px;
     font-family: "Inter";
-    border: 3px solid #fb7258;
     padding: 12px 45px;
+    border: 3px solid #fb7258;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     border-radius: 30px;
-    background-color:#f4f4f4 ;
+    background-color:#f8f8f8 ;
 }
 
-.cart:hover {
-    background-color: rgba(251, 114, 88, 0.1);
+.cart1:hover {
+    background-color: rgba(251, 114, 88, 0.5);
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 1s;
   }
 .cart2{
     padding: 11px 55px;
+    border: 3px solid rgba(236, 188, 29, 0.9);
+}
+
+.cart2:hover {
+  background-color:rgba(236, 188, 29, 0.9);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 1s;
 }

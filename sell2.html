@@ -78,8 +78,12 @@
 
         <script type="text/javascript">
           document.getElementById("sell-btn").onclick = function () {
+              console.log('hello');
               location.href = "sell_form.html";
           };
+          function cardclick(){
+            location.href = "product_details.html";
+          }
         </script>
         
         <ul class="navbar-nav">
@@ -243,7 +247,7 @@
       <div class="container-xxl pt-2 ">
         <div class="row g-0">
           <div class="col-2 col-md-3  border-end border-4">
-            <p class="h3 text-start fnt">Filters</p>
+            <p class="h6 text-start fnt">Filters</p>
             <hr class="dropdown-divider">
             <div class="container mt-4">
               
@@ -324,16 +328,16 @@
           </div>
           <div class="col-10 col-md-9 scrl">
             <div class="card mt-3 mb-2 ms-1 me-1 shadow-sm">
-              <div class="card-body">
+              <div class="card-body" onclick="cardclick()">
                 <div class="container">
                    <div class="row">
                      <div class="col-3">
-                       <img src="assets/table.jpg" alt="" class="img-fluid">
+                       <img src="assets/table2.png" alt="" class="img-fluid">
                      </div>
                      <div class="col-6 border-end border-2">
                       <p class=" fnt pb-0 mb-0">Woodworks Table  Polished</p>
                       <div class="card-text pb-3 pt-0 mt-0">Netaji Subhas University Of technology</div>
-                      <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; 1500-Negotiable</div></h4>
+                      <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; 1500 - Negotiable</div></h4>
                      </div>
                      <div class="col-3">
                        <div class="container">
@@ -376,7 +380,7 @@
               </div>
             </div>
             <div class="card mt-3 mb-2 ms-1 me-1 shadow-sm">
-              <div class="card-body">
+              <div class="card-body" onclick="cardclick()">
                 <div class="container">
                    <div class="row">
                      <div class="col-3">
@@ -428,7 +432,7 @@
               </div>
             </div>
             <div class="card mt-3 mb-2 ms-1 me-1 shadow-sm">
-              <div class="card-body">
+              <div class="card-body" onclick="cardclick()">
                 <div class="container">
                    <div class="row">
                      <div class="col-3">
@@ -480,7 +484,7 @@
               </div>
             </div>
             <div class="card  mt-3 mb-2 ms-1 me-1 shadow-sm">
-              <div class="card-body">
+              <div class="card-body" onclick="cardclick()">
                 <div class="container">
                    <div class="row">
                      <div class="col-3">
@@ -533,8 +537,8 @@
                 </div>
               </div>
             </div>
-            <div class="card mt-3 mb-2  ms-1 me-1 shadow-sm ">
-              <div class="card-body">
+            <div class="card mt-3 mb-0 ms-1 me-1 shadow-sm ">
+              <div class="card-body" onclick="cardclick()">
                 <div class="container">
                    <div class="row">
                      <div class="col-3">
