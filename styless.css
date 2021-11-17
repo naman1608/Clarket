@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap');
+::-webkit-scrollbar {
+  display: none;
+}
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none;
@@ -36,6 +40,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .bh{
   background-color: #fb7258 !important;
+  font-size: 1.5rem;
 }
 input[type=range] {
   height: 25px;
@@ -185,9 +190,30 @@ input[type=number] {text-align: center;}
   }
   
  
-  .cbtn:hover{
+  /* .cbtn:hover{
     background-color: #ea4335;
     color: white;
+  } */
+  .cbtn:link,
+  .cbtn:visited {
+    margin-top: 10px;
+    margin-left: 12px;
+    color: black;
+    font-weight: 500;
+    font-size: 19px;
+    font-family: "Inter";
+    border: 3px solid #fb7258;
+    padding: 9px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+  }
+  
+  .cbtn:hover {
+    background-color: rgba(251, 114, 88, 0.1);
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 1s;
   }
  
   .form-check input:checked{
@@ -197,20 +223,46 @@ input[type=number] {text-align: center;}
     color: #fb7258;
     
   }
+  .value{
+    display: none;
+  }
   
   .bii{
+    color: #fb7258;
+    border:1px solid #000000;
+  }
+  .bii:hover{
     color: #E5E5E5;
     background-color: #000000;
   }
-  .bii:hover{
-    color: #fb7258;
-  }
   
   .bs{
-    background-color:#AAAAAA !important;
+    background-color: white!important;
     border-radius: 100px !important;
     padding :4px 9px 4px 9px  !important;
     font-weight:normal  !important;
+    border:2px solid #fb7258;
+    color: #000000;
+  }
+  .card:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+    box-shadow: 2px 2px 3px #AAAAAA !important;
+  }
+  .sizee{
+    height: 20px;
+    width: 20px;
+  }
+  .scrl{
+    /* overflow-y: hidden;
+    height:500px; */
+    overflow-y: scroll;
+    height: 800px;
 
   }
-  
+  .fnt{
+    font-size: 2rem;
+    font-family: "Inter",sans-serif;
+    
+    
+  }

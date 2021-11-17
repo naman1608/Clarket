@@ -7,6 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
       rel="stylesheet"
     />
@@ -256,7 +262,7 @@
                       </div>
                       <div class="col-3 ">
                         
-                        <input type="number" name="min" id="minimum" class="wix rounded-pill">
+                        <input type="number" name="min" id="minimum" class="wix rounded-pill" value="100">
                       </div>
                     </div>
                   </div>
@@ -271,7 +277,7 @@
                       </div>
                       <div class="col-3">
                         
-                        <input type="number" name="max" id="maximum" class="wix rounded-pill" >
+                        <input type="number" name="max" id="maximum" class="wix rounded-pill"  value="100">
                       </div>
                     </div>
                   </div>
@@ -307,13 +313,16 @@
 
               <p class="text-muted h5">Tags</p>
               <form class="form-inline mt-1">
+                
                 <input type="text" class="form-control" id="inlineFormInputName2" placeholder="Tags">
-                <button  class="btn bii" id="tags" type="button">ADD</button>
+                <button  class="btn bii" id="tags" type="button"><svg xmlns="http://www.w3.org/2000/svg" class="sizee" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                </svg></button>
               </form>
               <div class="dpp"></div>
             </div>
           </div>
-          <div class="col-10 col-md-9">
+          <div class="col-10 col-md-9 scrl">
             <div class="card mt-3 mb-2 ms-1 me-1 shadow-sm">
               <div class="card-body">
                 <div class="container">
@@ -322,8 +331,8 @@
                        <img src="assets/table.jpg" alt="" class="img-fluid">
                      </div>
                      <div class="col-6 border-end border-2">
-                      <p class="display-6 pt-2">Woodworks Table Newly Polished</p>
-                      <div class="card-text ">Netaji Subhas University Of technology</div>
+                      <p class=" fnt pb-0 mb-0">Woodworks Table  Polished</p>
+                      <div class="card-text pb-3 pt-0 mt-0">Netaji Subhas University Of technology</div>
                       <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; 1500-Negotiable</div></h4>
                      </div>
                      <div class="col-3">
@@ -332,11 +341,11 @@
                       <div class="row">
                         <div class="col-4 nopadding ">
                           
-                          <p class="card-text h5 pt-4 text-center ms-2">Seller :</p>
+                          <p class="card-text h5 pt-3 text-center ms-2">Seller :</p>
                         </div>
                         <div class="col nopadding">
                           
-                          <div class="card-text text-muted pt-4 text-start ">Mahfooz Haque</div>
+                          <div class="card-text text-muted pt-3 text-start ">Mahfooz Haque</div>
                         </div>
                       </div>
                       
@@ -344,18 +353,122 @@
                         <div class="row  me-auto">
                           <div class="h5">Tags:</div>
                          <div class="col-5 " >
-                           <h6><div class="card-text badge bg-secondary bs">Furniture</div></h6>
+                           <h6><div class="card-text badge bg-secondary bs text-muted">Furniture</div></h6>
                           </div>
                           <div class="col-5">
 
-                            <h6><div class="card-text badge bg-secondary  bs">Table</div></h6>
+                            <h6><div class="card-text badge bg-secondary  bs text-muted">Table</div></h6>
                            </div>
                            
                         </div>
                         <div class="row me-auto">
                           <div class="col-5 ">
  
-                            <h6><div class="card-text badge bg-secondary  bs">Wood</div></h6>
+                            <h6><div class="card-text badge bg-secondary  bs text-muted">Wood</div></h6>
+                           </div>
+                            
+                         </div>
+                         
+                        </div>
+                     </div>
+                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mt-3 mb-2 ms-1 me-1 shadow-sm">
+              <div class="card-body">
+                <div class="container">
+                   <div class="row">
+                     <div class="col-3">
+                       <img src="assets/table.jpg" alt="" class="img-fluid">
+                     </div>
+                     <div class="col-6 border-end border-2">
+                      <p class="fnt pb-0 mb-0">Woodworks Table  Polished</p>
+                      <div class="card-text pt-0 mt-0 pb-3">Netaji Subhas University Of technology</div>
+                      <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; 1500-Negotiable</div></h4>
+                     </div>
+                     <div class="col-3">
+                       <div class="container">
+                      </div>
+                      <div class="row">
+                        <div class="col-4 nopadding ">
+                          
+                          <p class="card-text h5 pt-3 text-center ms-2">Seller :</p>
+                        </div>
+                        <div class="col nopadding">
+                          
+                          <div class="card-text text-muted pt-3 text-start ">Mahfooz Haque</div>
+                        </div>
+                      </div>
+                      
+                       <div class="container mt-4">
+                        <div class="row  me-auto">
+                          <div class="h5">Tags:</div>
+                         <div class="col-5 " >
+                           <h6><div class="card-text badge bg-secondary bs text-muted">Furniture</div></h6>
+                          </div>
+                          <div class="col-5">
+
+                            <h6><div class="card-text badge bg-secondary  bs text-muted">Table</div></h6>
+                           </div>
+                           
+                        </div>
+                        <div class="row me-auto">
+                          <div class="col-5 ">
+ 
+                            <h6><div class="card-text badge bg-secondary  bs text-muted">Wood</div></h6>
+                           </div>
+                            
+                         </div>
+                         
+                        </div>
+                     </div>
+                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mt-3 mb-2 ms-1 me-1 shadow-sm">
+              <div class="card-body">
+                <div class="container">
+                   <div class="row">
+                     <div class="col-3">
+                       <img src="assets/table.jpg" alt="" class="img-fluid">
+                     </div>
+                     <div class="col-6 border-end border-2">
+                      <p class="fnt pb-0 mb-0">Woodworks Table  Polished</p>
+                      <div class="card-text pb-3 pt-0 mt-0">Netaji Subhas University Of technology</div>
+                      <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; 1500-Negotiable</div></h4>
+                     </div>
+                     <div class="col-3">
+                       <div class="container">
+                      </div>
+                      <div class="row">
+                        <div class="col-4 nopadding ">
+                          
+                          <p class="card-text h5 pt-3 text-center ms-2">Seller :</p>
+                        </div>
+                        <div class="col nopadding">
+                          
+                          <div class="card-text text-muted pt-3 text-start ">Mahfooz Haque</div>
+                        </div>
+                      </div>
+                      
+                       <div class="container mt-4">
+                        <div class="row  me-auto">
+                          <div class="h5">Tags:</div>
+                         <div class="col-5 " >
+                           <h6><div class="card-text badge bg-secondary bs text-muted">Furniture</div></h6>
+                          </div>
+                          <div class="col-5">
+
+                            <h6><div class="card-text badge bg-secondary  bs text-muted">Table</div></h6>
+                           </div>
+                           
+                        </div>
+                        <div class="row me-auto">
+                          <div class="col-5 ">
+ 
+                            <h6><div class="card-text badge bg-secondary  bs text-muted">Wood</div></h6>
                            </div>
                             
                          </div>
@@ -374,21 +487,19 @@
                        <img src="assets/bed.jfif" alt="" class="img-fluid">
                      </div>
                      <div class="col-6 border-end border-2">
-                      <p class="display-6 pt-2">Godrej Double Decker bed</p>
-                      <div class="card-text ">Indraprastha institute of Information Technology, Delhi  </div>
-                      <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; 9800-Negotiable</div></h4>
+                      <p class="fnt pb-0 mb-0">Godrej Double Decker bed</p>
+                      <div class="card-text pb-3 pt-0 mt-0">Indraprastha institute of Information Technology, Delhi  </div>
+                      <h4><div class="card-text badge bg-primary ms-1 mt-2 bh ">&#8377; 9800-Negotiable</div></h4>
                      </div>
                      <div class="col-3">
-                      <div class="container">
-                      </div>
                       <div class="row">
                         <div class="col-4 nopadding ">
                           
-                          <p class="card-text h5 pt-4 text-center ms-2">Seller :</p>
+                          <p class="card-text h5  pt-3 text-center ms-2">Seller :</p>
                         </div>
                         <div class="col nopadding">
                           
-                          <div class="card-text text-muted pt-4 text-start ">Yajur Tayal</div>
+                          <div class="card-text text-muted pt-3 text-start ">Yajur Tayal</div>
                         </div>
                       </div>
                        <div class="container mt-4">
@@ -396,22 +507,22 @@
                           <div class="h5">Tags:</div>
                          <div class="col-5 ">
 
-                           <h6><div class="card-text badge bg-secondary  bs">Furniture</div></h6>
+                           <h6><div class="card-text badge bg-secondary  bs text-muted">Furniture</div></h6>
                           </div>
                           <div class="col-5">
 
-                            <h6><div class="card-text badge bg-secondary  bs">Bed</div></h6>
+                            <h6><div class="card-text badge bg-secondary  bs text-muted">Bed</div></h6>
                            </div>
                            
                         </div>
                         <div class="row me-auto">
                           <div class="col-5 ">
  
-                            <h6><div class="card-text badge bg-secondary  bs">Metal</div></h6>
+                            <h6><div class="card-text badge bg-secondary  bs text-muted">Metal</div></h6>
                            </div>
                            <div class="col-5">
  
-                             <h6><div class="card-text badge bg-secondary  bs">Double Decker</div></h6>
+                             <h6><div class="card-text badge bg-secondary  bs text-muted">Double Decker</div></h6>
                             </div>
                             
                          </div>
@@ -430,8 +541,8 @@
                        <img src="assets/chair.jfif" alt="" class="img-fluid">
                      </div>
                      <div class="col-6 border-end border-2">
-                      <p class="display-6 pt-2">Khimser Dining Chair</p>
-                      <div class="card-text ">Delhi Technological University </div>
+                      <p class="fnt pb-0 mb-0">Khimser Dining Chair</p>
+                      <div class="card-text pb-3 pt-0 mt-0">Delhi Technological University </div>
                       <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; 3000-Negotiable</div></h4>
                      </div>
                      <div class="col-3">
@@ -440,11 +551,11 @@
                       <div class="row">
                         <div class="col-4 nopadding ">
                           
-                          <p class="card-text h5 pt-4 text-center ms-2">Seller :</p>
+                          <p class="card-text h5 pt-3 text-center ms-2">Seller :</p>
                         </div>
                         <div class="col nopadding">
                           
-                          <div class="card-text text-muted pt-4 text-start ">Samad Ahmed</div>
+                          <div class="card-text text-muted pt-3 text-start ">Samad Ahmed</div>
                         </div>
                       </div>
                        <div class="container mt-4">
@@ -452,22 +563,22 @@
                           <div class="h5">Tags:</div>
                          <div class="col-5 ">
 
-                           <h6><div class="card-text badge bg-secondary  bs">Wood</div></h6>
+                           <h6><div class="card-text badge bg-secondary  bs text-muted">Wood</div></h6>
                           </div>
                           <div class="col-5">
 
-                            <h6><div class="card-text badge bg-secondary  bs">Furniture</div></h6>
+                            <h6><div class="card-text badge bg-secondary  bs text-muted">Furniture</div></h6>
                            </div>
                            
                         </div>
                         <div class="row me-auto">
                           <div class="col-5 ">
  
-                            <h6><div class="card-text badge bg-secondary  bs">Chair</div></h6>
+                            <h6><div class="card-text badge bg-secondary  bs text-muted">Chair</div></h6>
                            </div>
                            <div class="col-5">
  
-                             <h6><div class="card-text badge bg-secondary  bs">Dining</div></h6>
+                             <h6><div class="card-text badge bg-secondary  bs text-muted">Dining</div></h6>
                             </div>
                             
                          </div>
