@@ -3,7 +3,7 @@ body {
   background-color: #fbfbfb;
 }
 .main_container {
-  margin: 12vh;
+ margin: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -87,17 +87,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-family: "Dancing Script", sans-serif !important;
   font-size: 3rem;
 }
-.cbtn {
-  font-size: 1.5rem;
-  border: 3px solid #fb7258 !important;
-  border-radius: 20px;
-  width: 125px;
-}
-.cbtn:hover {
-  background-color: rgba(251, 114, 88, 0.1);
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 1s;
-}
+
 .bh {
   background-color: #fb7258 !important;
 }
@@ -251,10 +241,28 @@ input[type="number"] {
   outline: none;
 }
 
-.cbtn:hover {
-  background-color: #ea4335;
-  color: white;
+.cbtn:link,
+.cbtn:visited {
+  margin-top: 10px;
+  margin-left: 12px;
+  color: black;
+  font-weight: 500;
+  font-size: 19px;
+  font-family: "Inter";
+  border: 3px solid #fb7258;
+  padding: 9px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
 }
+
+.cbtn:hover {
+  background-color: rgba(251, 114, 88, 0.1);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 1s;
+}
+
 
 .form-check input:checked {
   background-color: gray !important;
@@ -307,4 +315,7 @@ input[type="number"] {
   background-color:rgba(236, 188, 29, 0.9);
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 1s;
+}
+.mrg{
+  margin-left: 10px !important;
 }
