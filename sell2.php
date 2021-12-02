@@ -49,7 +49,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light border border-5 shd">
       <div class="container-fluid container-lg hs">
-        <a class="navbar-brand home-heading " href="/index.html">Clarket</a>
+        <a class="navbar-brand home-heading " href="/index.php">Clarket</a>
         <form class="d-flex me-auto ms-auto">
           <button class="btn btn-outline-dark" type="submit">
             <svg
@@ -77,10 +77,10 @@
         <script type="text/javascript">
           document.getElementById("sell-btn").onclick = function () {
               //console.log('hello');
-              location.href = "sell_form.html";
+              location.href = "sell_form.php";
           };
           function cardclick(){
-            location.href = "product_details.html";
+            location.href = "product_details.php";
           }
         </script>
         
@@ -88,11 +88,9 @@
           <li class="nav-item me-1">
             <a
               class="nav-link rounded-pill logged-out"
-              href="#"
+              href="index.php"
               id="Account"
               role="button"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
             >
               Sign In
             </a>
@@ -103,110 +101,8 @@
               </a>
             
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="user_account.html">Profile</a>
+                <a class="dropdown-item" href="user_account.php">Profile</a>
                 <a class="dropdown-item" href="#" id="logoutbutton">Logout</a>
-              </div>
-            </div>
-
-            <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-body">
-                      <div class="container">
-                          <div class="row">
-                            <div class="col mx-auto p-auto">
-                              <div class="card border-0 shadow rounded-3">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                <div class="card-body ">
-                                  <h5 class="card-title text-center ">Sign In</h5><br>
-                                  <form id="loginform">
-                                    <div class="form-floating mb-3">
-                                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                      <label for="floatingInput">Email address</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                                      <label for="floatingPassword">Password</label>
-                                    </div>
-                      
-                                    <div class="form-check mb-3">
-                                      <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
-                                      <label class="form-check-label" for="rememberPasswordCheck">
-                                        Remember password
-                                      </label>
-                                    </div>
-                                    <div class="d-grid">
-                                      <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit" data-bs-dismiss="modal">Sign
-                                        in</button>
-                                        <p>Don't have an account ? <a href="" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal2"  data-dissmiss="modal">Sign Up</a></p>
-                                    </div>
-                                    <hr class="my-4">
-                                    <div class="d-grid mb-2">
-                                      <button class="btn btn-google btn-login text-uppercase fw-bold" id="signupgoogle" type="submit">
-                                        <i class="fab fa-google me-2"></i> Sign in with Google
-                                      </button>
-                                    </div>
-                                  </form>
-                                </div> 
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Modal -->
-            <div class="modal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-body">
-                      <div class="container">
-                          <div class="row">
-                            <div class="col mx-auto p-auto">
-                              <div class="card border-0 shadow rounded-3">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                <div class="card-body "> 
-                                  <h5 class="card-title text-center ">Sign Up</h5><br>
-                                  <form id="signupform">
-                                      <div class="form-floating mb-3">
-                                          <input type="text" class="form-control" id="floatingName" placeholder="Name">
-                                          <label for="floatingInput">Name</label>
-                                        </div>
-                                    <div class="form-floating mb-3">
-                                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                      <label for="floatingInput">Email address</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                      <input type="password" class="form-control" id="floatingPassword1" placeholder="Set Password">
-                                      <label for="floatingPassword">Set Password</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                      <input type="password" class="form-control" id="floatingPassword2" placeholder="Confirm Password">
-                                      <label for="floatingPassword">Confirm Password</label>
-                                    </div>
-                      
-                                    <div class="d-grid">
-                                      <button class="btn btn-primary btn-login text-uppercase fw-bold" data-bs-dismiss="modal" type="submit" id="signupbutton">Sign
-                                        Up</button>
-                                        <p>Have an account ? <a href="" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal" >Sign In</a></p>
-                                    </div>
-                                    <hr class="my-4">
-                                    <div class="d-grid mb-2">
-                                      <button class="btn btn-google btn-login text-uppercase fw-bold" type="submit">
-                                        <i class="fab fa-google me-2"></i> Sign Up with Google
-                                      </button>
-                                    </div>
-                                  </form>
-                                </div> 
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                  </div>
-          
-                </div>
               </div>
             </div>
           </li>
@@ -488,9 +384,9 @@
         </a>
     
         <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="index.php" class="nav-link px-2 text-muted">Home</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-          <li class="nav-item"><a href="contact_us.html" class="nav-link px-2 text-muted" >Contact US</a></li>
+          <li class="nav-item"><a href="contact_us.php" class="nav-link px-2 text-muted" >Contact US</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About US</a></li>
         </ul>

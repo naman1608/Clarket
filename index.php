@@ -59,7 +59,7 @@
           Platform to buy and sell college commodities. <br />
           For Students. By Students.
         </p>
-        <a href="sell2.html">Explore</a>
+        <a href="sell2.php">Explore</a>
       </div>
     </div>
     <br />
