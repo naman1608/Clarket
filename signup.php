@@ -1,35 +1,51 @@
 <?php
-$login = false;
-$showError = false;
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    include 'partials/_dbconnect.php';
-    $username = $_POST["username"];
-    $password = $_POST["password"]; 
-    
-     
-    $sql = "Select * from users where username='$username' AND password='$password'";
-    $result = mysqli_query($conn, $sql);
-    $num = mysqli_num_rows($result);
-    if ($num == 1){
-        $login = true;
-        session_start();
-        $_SESSION['loggedin'] = true;
-        $_SESSION['username'] = $username;
-        header("location: index.php");
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "users";
 
-    } 
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $username = $_POST["username"];
+    $email_id = $_POST["emailid"];
+    $password = $_POST["password"];
+    $cpassword = $_POST["cpassword"];
+    $exists=false;
+   // echo $username." ".$password;
+    if(($password == $cpassword) && $exists==false){
+            $sql = "INSERT INTO users (email,user_name, password,date_time)
+            VALUES ('$email_id','$username', '$password',current_timestamp())";
+
+            if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+            header("location : signin.php");
+            } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+            
+}
+    }
     else{
-        $showError = "Invalid Credentials";
+        echo "Passwords do not match";
     }
 }
-    
+
+
 ?>
 
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Clarket-Sign in</title>
+  <title>Clarket-Sign Up</title>
   <link rel="stylesheet" type="text/css" href="signin.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -69,42 +85,44 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       </div>
       <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
         <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-          <h1><a href="http://blog.stackfindover.com/" rel="dofollow">CLARKET</a></h1>
+          <a class="navbar-brand home-heading " href="/index.html">Clarket</a>
         </div>
         <div class="formbg-outer">
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
-              <span class="padding-bottom--15">Sign in to your account</span>
-              <form id="stripe-login" action="signin.php" method="post">
+              <span class="padding-bottom--15">Sign up to your account</span>
+              <form id="stripe-login" action="signup.php" method="post">
+                <div class="field padding-bottom--24">
+                    <label for="username">Username</label>
+                    <input type="text" name="username">
+                  </div>
                 <div class="field padding-bottom--24">
                   <label for="email">Email</label>
-                  <input type="email" name="email">
+                  <input type="email" name="emailid">
                 </div>
                 <div class="field padding-bottom--24">
                   <div class="grid--50-50">
-                    <label for="password">Password</label>
-                    <div class="reset-pass">
-                      <a href="#">Forgot your password?</a>
-                    </div>
+                    <label for="password">Set Password</label>
                   </div>
                   <input type="password" name="password">
                 </div>
-                <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
-                  <label for="checkbox">
-                    <input type="checkbox" name="checkbox"> Remember password
-                  </label>
-                </div>
                 <div class="field padding-bottom--24">
-                  <input type="submit" name="submit" value="Continue">
+                    <div class="grid--50-50">
+                      <label for="cpassword">Confirm Password</label>
+                    </div>
+                    <input type="password" name="cpassword">
+                  </div>
+                <div class="field padding-bottom--24">
+                  <input type="submit" name="submit" value="Sign up">
                 </div>
                 <div class="field">
-                  <a class="ssolink" href="#">Use single sign-on (Google) instead</a>
+                  <a class="ssolink" href="#">Sign up with Google instead</a>
                 </div>
               </form>
             </div>
           </div>
           <div class="footer-link padding-top--24">
-            <span>Don't have an account? <a href="signup.php">Sign up</a></span>
+            <span>Already have an account? <a href="signin.php">Sign in</a></span>
             <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
               <span><a href="#">© Clarket</a></span>
               <span><a href="#">Contact</a></span>
