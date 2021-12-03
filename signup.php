@@ -21,10 +21,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(($password == $cpassword) && $exists==false){
             $sql = "INSERT INTO users (email,user_name, password,date_time)
             VALUES ('$email_id','$username', '$password',current_timestamp())";
+            
+            function redirect($url) {
+              ob_start();
+              header('Location: '.$url);
+              ob_end_flush();
+              die();
+          }
 
             if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
-            header("location : signin.php");
+            redirect("signin.php");
             } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
             
