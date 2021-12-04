@@ -242,3 +242,8 @@
     font-size:3rem;
     color: black;
 }
+
+.alert{
+  position: relative;
+  z-index: 1000 !important;
+}
