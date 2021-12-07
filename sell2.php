@@ -199,8 +199,64 @@
               <div class="dpp"></div>
             </div>
           </div>
-          <div class="col-10 col-md-9 scrl">
-            <div class="card mt-3 mb-2 ms-1 me-1 shadow-sm">
+          <div class="col-10 col-md-9 scrl">            
+            <?php
+            include 'partials/_dbconnect.php';
+            $sql = "SELECT * FROM `products`";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+              while($row = $result->fetch_assoc()) {
+                echo '<div class="card mt-3 mb-2 ms-1 me-1 shadow-sm">
+                <div class="card-body" onclick="cardclick()">
+                  <div class="container">
+                     <div class="row">
+                       <div class="col-3">
+                         <img src="assets/table2.png" alt="" class="img-fluid">
+                       </div>
+                       <div class="col-6 border-end border-2">
+                        <p class=" fnt pb-0 mb-0">'.$row["title"].'</p>
+                        <div class="card-text pb-3 pt-0 mt-0">Netaji Subhas University Of technology</div>
+                        <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; '.$row["price"].' - Negotiable</div></h4>
+                       </div>
+                       <div class="col-3">
+                         
+                        <div class="row g-0">
+                          <div class="col-4 nopadding ">
+                            
+                            <p class="card-text h5 pt-3 text-center ms-2">Seller :</p>
+                          </div>
+                          <div class="col-8 nopadding">
+                            
+                            <div class="card-text text-muted pt-3 text-start ">'.$row["seller_name"].'</div>
+                          </div>
+                        </div>
+                        
+                         <div class="container mt-4">
+                          <div class="me-auto">
+                            <div class="h5">Tags:</div>
+                            <span class="card-text badge bg-secondary bs text-muted m-1">'.$row["category"].'</span>
+                            <span class="card-text badge bg-secondary  bs text-muted m-1">'.$row["product"].'</span>
+                           
+                             
+                          </div>
+                          <div class=" me-auto">
+            
+                              <span class="card-text badge bg-secondary bs text-muted m-1">Teak</span>
+                              <!-- <span class="card-text badge bg-secondary  bs text-muted m-1">Table</span> -->
+                            
+                              
+                           </div>
+                           
+                          </div>
+                       </div>
+                     </div>
+                  </div>
+                </div>
+              </div>';
+              }
+            }
+            ?>
+            <!-- <div class="card mt-3 mb-2 ms-1 me-1 shadow-sm">
               <div class="card-body" onclick="cardclick()">
                 <div class="container">
                    <div class="row">
@@ -374,7 +430,7 @@
                    </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         </div>

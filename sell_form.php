@@ -1,3 +1,38 @@
+<?php
+
+include 'partials/_dbconnect.php';
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $category = $_POST["slct1"];
+    $product = $_POST["slct2"];
+    $title = $_POST["adTitle"];
+    $description = $_POST["adDescription"];
+    $price = $_POST["adPrice"];
+    $phone = $_POST["adPhone"];
+    $seller_name = $_POST["adTitle"];
+   // echo $username." ".$password;
+    $sql = "INSERT INTO products (category, product, title, description, price, phone, seller_name)
+    VALUES ('$category','$product', '$title','$description', '$price', '$phone', '$seller_name')";
+    
+    // function redirect($url) {
+    //   ob_start();
+    //   header('Location: '.$url);
+    //   ob_end_flush();
+    //   die();
+    // }
+
+    if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+    //redirect("signin.php");
+    } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+
+?>
+
+
 <html>
 <head>
   <meta charset="utf-8">
@@ -165,11 +200,11 @@ margin: auto;
                     </div>
                     <div>
                             <label for="adPrice">Price</label>
-                            <input type="number" value="adPrice" required /><br />
+                            <input type="number" value="adPrice" name="adPrice" required /><br />
                     </div>
                     <div>
                             <label for="adPhone">Phone Number</label>
-                            <input type="number" id="adPhone" required /><br />
+                            <input type="number" id="adPhone" name="adPhone" required /><br />
                     </div>
                     <div >
                             <label for="adTitle">Seller Name</label>
