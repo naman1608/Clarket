@@ -3,25 +3,25 @@ $login = false;
 $showError = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     include 'partials/_dbconnect.php';
-    $username = $_POST["email"];
+    $email_id = $_POST["email"];
     $password = $_POST["password"]; 
     
      
-    $sql = "Select * from users where email='$username' AND password='$password'";
+    $sql = "Select * from users where email='$email_id' AND password='$password'";
     $result = mysqli_query($conn, $sql);
     $num = mysqli_num_rows($result);
     if ($num == 1){
-
+        $row = mysqli_fetch_assoc($result);
         $login = true;
         session_start();
         $_SESSION['loggedin'] = true;
-        $_SESSION['username'] = $username;
+        $_SESSION['username'] = $row['user_name'];
         header("location: sell2.php");
-
     } 
     else{
         $showError = "Invalid Credentials";
     }
+
 }
     
 ?>
