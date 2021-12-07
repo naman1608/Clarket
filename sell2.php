@@ -168,7 +168,7 @@
                 <div class="form-check p-2">
                   <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
                   <label class="form-check-label text-muted" for="flexCheckDefault">
-                    Netaji Subhas University of technology
+                    Netaji Subhas University of Technology
                   </label>
                 </div>
                 <div class="form-check p-2">
@@ -206,7 +206,8 @@
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
               while($row = $result->fetch_assoc()) {
-                echo '<div class="card mt-3 mb-2 ms-1 me-1 shadow-sm">
+                echo '<a class="cardanchor" href="product_details.php?product_id='.$row["product_id"].'" style="text-decoration: none">
+                <div class="card mt-3 mb-2 ms-1 me-1 shadow-sm">
                 <div class="card-body" onclick="cardclick()">
                   <div class="container">
                      <div class="row">
@@ -214,8 +215,8 @@
                          <img src="assets/table2.png" alt="" class="img-fluid">
                        </div>
                        <div class="col-6 border-end border-2">
-                        <p class=" fnt pb-0 mb-0"><a href="product_details.php?product_id='.$row["product_id"].'">'.$row["title"].'</a></p>
-                        <div class="card-text pb-3 pt-0 mt-0">Netaji Subhas University Of technology</div>
+                        <p class=" fnt pb-0 mb-0">'.$row["title"].'</p>
+                        <div class="card-text pb-3 pt-0 mt-0">Netaji Subhas University Of Technology</div>
                         <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; '.$row["price"].' - Negotiable</div></h4>
                        </div>
                        <div class="col-3">
@@ -243,16 +244,13 @@
             
                               <span class="card-text badge bg-secondary bs text-muted m-1">Teak</span>
                               <!-- <span class="card-text badge bg-secondary  bs text-muted m-1">Table</span> -->
-                            
-                              
                            </div>
-                           
                           </div>
                        </div>
                      </div>
                   </div>
                 </div>
-              </div>';
+              </div></a>';
               }
             }
             ?>
@@ -265,7 +263,7 @@
                      </div>
                      <div class="col-6 border-end border-2">
                       <p class=" fnt pb-0 mb-0">Woodworks Table  Polished</p>
-                      <div class="card-text pb-3 pt-0 mt-0">Netaji Subhas University Of technology</div>
+                      <div class="card-text pb-3 pt-0 mt-0">Netaji Subhas University Of Technology</div>
                       <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; 1500 - Negotiable</div></h4>
                      </div>
                      <div class="col-3">
@@ -312,7 +310,7 @@
                      </div>
                      <div class="col-6 border-end border-2">
                       <p class="fnt pb-0 mb-0">Woodworks Table  Polished</p>
-                      <div class="card-text pt-0 mt-0 pb-3">Netaji Subhas University Of technology</div>
+                      <div class="card-text pt-0 mt-0 pb-3">Netaji Subhas University Of Technology</div>
                       <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; 1500-Negotiable</div></h4>
                      </div>
                      <div class="col-3">
