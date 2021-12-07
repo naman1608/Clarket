@@ -107,7 +107,7 @@
             
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="user_account.php">Profile</a>
-                <a class="dropdown-item" href="#" id="logoutbutton">Logout</a>
+                <a class="dropdown-item" href="logout.php" id="logoutbutton">Logout</a>
               </div>
             </div>
           </li>
@@ -446,7 +446,10 @@
       <!-- <script type="module" src="scripts/auth.js"></script> -->
       <?php
         if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
+          $var =  $_SESSION['username'];
           echo '<script>
+          var lel = document.getElementById("dropdownMenuLink");
+          lel.innerHTML = "'.$var.'";
           const loggedinelements = document.querySelectorAll(".logged-in");
           const loggedoutelements = document.querySelectorAll(".logged-out");        
           loggedinelements.forEach(element => element.style.display = "block");

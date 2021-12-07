@@ -136,7 +136,7 @@ margin: auto;
         <div class="formbg-outer">
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
-              <form id="sellForm">
+              <form id="sellForm" action="sell_form.php" method="post">
                   <div class="field padding-bottom--24">
                     <label for="slct1">Choose Product Category</label>
                     <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
