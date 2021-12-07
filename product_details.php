@@ -205,7 +205,39 @@
         <div class="image">
             <img src="assets/table2.png" id="img1">
         </div>
-        <div class="desc">
+
+        <?php
+
+            include 'partials/_dbconnect.php';
+
+            $id = $_GET['product_id'];
+            $sql = "SELECT * FROM `products` WHERE product_id=$id"; 
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+            echo '
+            <div class="desc">
+            <p class="heading1">'.$row["title"].'</p>
+            <span class="heading2">Netaji Subhas University of Technology</span>
+            <hr>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPrice: &nbsp&nbsp<span class="price">&#8377 '.$row["price"].'- Negotiable</span></p>
+            <p>&nbsp&nbspCondition: &nbsp&nbspBrand new with a bit of wear on one side.</p>
+            <p>Description:'.$row["description"].'</p>
+            <hr>
+            <div class="buttons" ><button class="cart cart1" onclick="addtocart()">Add to cart</button>
+                <button class="cart cart2" >Buy Now</button>
+            </div>
+        </div>
+        <div class="seller">
+            <p class="heading3">Seller information</p>
+            <p>'.$row["seller_name"].'</p>
+            <p>'.$row["phone"].'</p>
+            <p><a href="mailto:aditya@gmail.com" class="email_link">aditya@gmail.com</a></p>
+        </div>
+            ';
+
+
+        ?>
+        <!-- <div class="desc">
             <p class="heading1">Woodworks Table Newly Polished</p>
             <span class="heading2">Netaji Subhas University of Technology</span>
             <hr>
@@ -222,7 +254,7 @@
             <p>Aditya Singh</p>
             <p>9811223344</p>
             <p><a href="mailto:aditya@gmail.com" class="email_link">aditya@gmail.com</a></p>
-        </div>
+        </div> -->
     </div>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
