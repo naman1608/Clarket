@@ -214,7 +214,7 @@
                          <img src="assets/table2.png" alt="" class="img-fluid">
                        </div>
                        <div class="col-6 border-end border-2">
-                        <p class=" fnt pb-0 mb-0"><a href="product_details.php?product_id='.$row["product_id"].'">'.$row["title"].'</p>
+                        <p class=" fnt pb-0 mb-0"><a href="product_details.php?product_id='.$row["product_id"].'">'.$row["title"].'</a></p>
                         <div class="card-text pb-3 pt-0 mt-0">Netaji Subhas University Of technology</div>
                         <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; '.$row["price"].' - Negotiable</div></h4>
                        </div>
@@ -292,7 +292,7 @@
                         <div class=" me-auto">
           
                             <span class="card-text badge bg-secondary bs text-muted m-1">Teak</span>
-                             <span class="card-text badge bg-secondary  bs text-muted m-1">Table</span> -->
+                            <!-- <span class="card-text badge bg-secondary  bs text-muted m-1">Table</span> -->
                           
                             
                          </div>

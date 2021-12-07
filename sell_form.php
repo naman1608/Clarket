@@ -9,7 +9,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $description = $_POST["adDescription"];
     $price = $_POST["adPrice"];
     $phone = $_POST["adPhone"];
-    $seller_name = $_POST["adTitle"];
+    $seller_name = $_POST["adseller"];
    // echo $username." ".$password;
     $sql = "INSERT INTO products (category, product, title, description, price, phone, seller_name)
     VALUES ('$category','$product', '$title','$description', '$price', '$phone', '$seller_name')";
@@ -207,8 +207,8 @@ margin: auto;
                             <input type="number" id="adPhone" name="adPhone" required /><br />
                     </div>
                     <div >
-                            <label for="adTitle">Seller Name</label>
-                            <input type="text" name="adTitle" required /><br />
+                            <label for="adseller">Seller Name</label>
+                            <input type="text" name="adseller" required /><br />
                     </div>
                 <br>
                 <table>
