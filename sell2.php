@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <?php
   session_start();
-  if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
-    echo '<form class="form-inline my-2 my-lg-0" method="get" action="search.php">
-      <input class="form-control mr-sm-2" name="search" type="search" actiion="search.php" placeholder="Search" aria-label="Search">
-      <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-        <p class="text-dark my-0 mx-2">Welcome '. $_SESSION['username']. ' </p>
-        <a href="partials/_logout.php" class="btn btn-outline-success ml-2">Logout</a>
-        </form>';
-  }
+  
+  
 ?>
 <html lang="en">
   <head>
@@ -449,7 +443,26 @@
       crossorigin="anonymous"
       ></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script type="module" src="scripts/auth.js"></script>
+      <!-- <script type="module" src="scripts/auth.js"></script> -->
+      <?php
+        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
+          echo '<script>
+          const loggedinelements = document.querySelectorAll(".logged-in");
+          const loggedoutelements = document.querySelectorAll(".logged-out");        
+          loggedinelements.forEach(element => element.style.display = "block");
+          loggedoutelements.forEach(element => element.style.display = "none");
+          </script>';
+        }
+        else{
+          echo '<script>
+          const loggedinelements = document.querySelectorAll(".logged-in");
+          const loggedoutelements = document.querySelectorAll(".logged-out");
+          console.log("logged-out");
+          loggedinelements.forEach(element => element.style.display = "none");
+          loggedoutelements.forEach(element => element.style.display = "block");
+          </script>';
+        }
+      ?>
     </body>
     </html>
     
