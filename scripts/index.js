@@ -51,52 +51,52 @@ const inpFile = document.getElementById("inpFile");
       var optionsArr = [];
       s2.innerHTML = "";
 
-      if (s1.value == "furniture") {
+      if (s1.value == "Furniture") {
         optionsArr = [
-          "table|Table",
-          "chair|Chair",
-          "almirah|Almirah",
-          "bed|Bed",
+          "Table|Table",
+          "Chair|Chair",
+          "Almirah|Almirah",
+          "Bed|Bed",
         ];
-      } else if (s1.value == "electronics") {
+      } else if (s1.value == "Electronics") {
         optionsArr = [
-          "mobile|Mobile",
-          "laptop|Laptop",
-          "headphone|Headphone",
-          "charger|Charger",
-          "cable|Cable",
-          "powerbank|Powerbank",
+          "Mobile|Mobile",
+          "Laptop|Laptop",
+          "Headphone|Headphone",
+          "Charger|Charger",
+          "Cable|Cable",
+          "Powerbank|Powerbank",
         ];
-      } else if (s1.value == "books") {
+      } else if (s1.value == "Books") {
         optionsArr = [
-          "sem1|Semester 1",
-          "sem2|Semester 2",
-          "sem3|Semester 3",
-          "sem4|Semester 4",
-          "sem5|Semester 5",
-          "sem6|Semester 6",
-          "sem7|Semester 7",
-          "sem8|Semester 8",
+          "Sem1|Semester 1",
+          "Sem2|Semester 2",
+          "Sem3|Semester 3",
+          "Sem4|Semester 4",
+          "Sem5|Semester 5",
+          "Sem6|Semester 6",
+          "Sem7|Semester 7",
+          "Sem8|Semester 8",
         ];
-      } else if (s1.value == "beddings") {
+      } else if (s1.value == "Beddings") {
         optionsArr = [
-          "bedsheet|Bedsheet",
-          "pillow|Pillow",
-          "curtains|Curtains",
-          "blanket|Blanket",
+          "Bedsheet|Bedsheet",
+          "Pillow|Pillow",
+          "Curtains|Curtains",
+          "Blanket|Blanket",
         ];
-      } else if (s1.value == "bathroom accessories") {
+      } else if (s1.value == "Bathroom Accessories") {
         optionsArr = [
-          "tub|Tub",
-          "mug|Mug",
-          "laundry basket|Laundry Basket",
-          "heating rod|Heating Rod",
+          "Tub|Tub",
+          "Mug|Mug",
+          "Laundry Basket|Laundry Basket",
+          "Heating Rod|Heating Rod",
         ];
-      } else if (s1.value == "kitchen accessories") {
+      } else if (s1.value == "Kitchen Accessories") {
         optionsArr = [
-          "induction|Induction",
-          "kettle|Kettle",
-          "utensils|Utensils",
+          "Induction|Induction",
+          "Kettle|Kettle",
+          "Utensils|Utensils",
         ];
       }
 

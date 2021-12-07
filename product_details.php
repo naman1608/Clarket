@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+  session_start();  
+?>
 <html lang="en">
 
 <head>
@@ -38,167 +41,57 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light border border-5 shadow navbar-fixed-top">
-        <div class="container-fluid container-lg">
-            <a class="navbar-brand home-heading" href="/index.html">Clarket</a>
-            <form class="d-flex me-auto ms-auto">
-                <button class="btn btn-outline-dark" type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
-                        class="bi bi-search m-auto mx-1 " viewBox="0 0 16 16">
-                        <path
-                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                    </svg>
-                </button>
-                <input class="form-control widath " type="search"
-                    placeholder="Search for products such as Table,Fan,Books etc." aria-label="Search" />
-            </form>
+    
+<nav class="navbar navbar-expand-lg navbar-light border border-5 shd">
+      <div class="container-fluid container-lg hs">
+        <a class="navbar-brand home-heading " href="/index.php">Clarket</a>
+        <form class="d-flex me-auto ms-auto">
+          <button class="btn btn-outline-dark" type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="21"
+              fill="currentColor"
+              class="bi bi-search m-auto mx-1 "
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+          </button>
+          <input
+            class="form-control widath "
+            type="search"
+            placeholder="Search for products such as Table,Fan,Books etc."
+            aria-label="Search"
+          />
+        </form>
+        <ul class="navbar-nav">
+          <li class="nav-item me-1">
+            <a
+              class="nav-link rounded-pill logged-out"
+              href="signin.php"
+              id="Account"
+              role="button"
+            >
+              Sign In
+            </a>
 
-            <ul class="navbar-nav">
-                <li class="nav-item me-1">
-                    <a
-                    class="nav-link rounded-pill logged-out"
-                    href="#"
-                    id="Account"
-                    role="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                  >
-                    Sign In
-                  </a>
-                    <div class="dropdown show">
-                        <a class="btn cbtn mb-2 dropdown-toggle logged-in" href="#" role="button"
-                            id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Naman
-                        </a>
+            <div class="dropdown show">
+              <a class="btn cbtn mb-2 dropdown-toggle logged-in" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Naman
+              </a>
+            
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="user_account.php">Profile</a>
+                <a class="dropdown-item" href="logout.php" id="logoutbutton">Logout</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="user_account.html">Profile</a>
-                            <a class="dropdown-item" href="#" id="logoutbutton">Logout</a>
-                        </div>
-                    </div>
-
-                    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col mx-auto p-auto">
-                                                <div class="card border-0 shadow rounded-3">
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                    <div class="card-body ">
-                                                        <h5 class="card-title text-center ">Sign In</h5><br>
-                                                        <form id="loginform">
-                                                            <div class="form-floating mb-3">
-                                                                <input type="email" class="form-control"
-                                                                    id="floatingInput" placeholder="name@example.com">
-                                                                <label for="floatingInput">Email address</label>
-                                                            </div>
-                                                            <div class="form-floating mb-3">
-                                                                <input type="password" class="form-control"
-                                                                    id="floatingPassword" placeholder="Password">
-                                                                <label for="floatingPassword">Password</label>
-                                                            </div>
-
-                                                            <div class="form-check mb-3">
-                                                                <input class="form-check-input" type="checkbox" value=""
-                                                                    id="rememberPasswordCheck">
-                                                                <label class="form-check-label"
-                                                                    for="rememberPasswordCheck">
-                                                                    Remember password
-                                                                </label>
-                                                            </div>
-                                                            <div class="d-grid">
-                                                                <button
-                                                                    class="btn btn-primary btn-login text-uppercase fw-bold"
-                                                                    type="submit" data-bs-dismiss="modal">Sign
-                                                                    in</button>
-                                                                <p>Don't have an account ? <a href=""
-                                                                        data-bs-dismiss="modal" data-bs-toggle="modal"
-                                                                        data-bs-target="#exampleModal2"
-                                                                        data-dissmiss="modal">Sign Up</a></p>
-                                                            </div>
-                                                            <hr class="my-4">
-                                                            <div class="d-grid mb-2">
-                                                                <button
-                                                                    class="btn btn-google btn-login text-uppercase fw-bold"
-                                                                    type="submit">
-                                                                    <i class="fab fa-google me-2"></i> Sign in with
-                                                                    Google
-                                                                </button>
-                                                            </div>
-                                                            <div class="d-grid">
-                                                                <button
-                                                                    class="btn btn-facebook btn-login text-uppercase fw-bold"
-                                                                    type="submit">
-                                                                    <i class="fab fa-facebook-f me-2"></i> Sign in with
-                                                                    Facebook
-                                                                </button>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-body">
-                                <div class="container">
-                                    <div class="row">
-                                      <div class="col mx-auto p-auto">
-                                        <div class="card border-0 shadow rounded-3">
-                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                          <div class="card-body "> 
-                                            <h5 class="card-title text-center ">Sign Up</h5><br>
-                                            <form id="signupform">
-                                                <div class="form-floating mb-3">
-                                                    <input type="text" class="form-control" id="floatingName" placeholder="Name">
-                                                    <label for="floatingInput">Name</label>
-                                                  </div>
-                                              <div class="form-floating mb-3">
-                                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                                <label for="floatingInput">Email address</label>
-                                              </div>
-                                              <div class="form-floating mb-3">
-                                                <input type="password" class="form-control" id="floatingPassword1" placeholder="Set Password">
-                                                <label for="floatingPassword">Set Password</label>
-                                              </div>
-                                              <div class="form-floating mb-3">
-                                                <input type="password" class="form-control" id="floatingPassword2" placeholder="Confirm Password">
-                                                <label for="floatingPassword">Confirm Password</label>
-                                              </div>
-                                
-                                              <div class="d-grid">
-                                                <button class="btn btn-primary btn-login text-uppercase fw-bold" data-bs-dismiss="modal" type="submit" id="signupbutton">Sign
-                                                  Up</button>
-                                                  <p>Have an account ? <a href="" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal" >Sign In</a></p>
-                                              </div>
-                                              <hr class="my-4">
-                                              <div class="d-grid mb-2">
-                                                <button class="btn btn-google btn-login text-uppercase fw-bold" type="submit">
-                                                  <i class="fab fa-google me-2"></i> Sign Up with Google
-                                                </button>
-                                              </div>
-                                            </form>
-                                          </div> 
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-            </ul>
     </nav>
     <div id="alert"></div>
     <div class="main_container">
@@ -275,6 +168,28 @@
       </div>
       <script type="module" src="scripts/auth.js"></script>
       <script src="scripts/index.js"></script>
+      <?php
+        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
+          $var =  $_SESSION['username'];
+          echo '<script>
+          var lel = document.getElementById("dropdownMenuLink");
+          lel.innerHTML = "'.$var.'";
+          const loggedinelements = document.querySelectorAll(".logged-in");
+          const loggedoutelements = document.querySelectorAll(".logged-out");        
+          loggedinelements.forEach(element => element.style.display = "block");
+          loggedoutelements.forEach(element => element.style.display = "none");
+          </script>';
+        }
+        else{
+          echo '<script>
+          const loggedinelements = document.querySelectorAll(".logged-in");
+          const loggedoutelements = document.querySelectorAll(".logged-out");
+          console.log("logged-out");
+          loggedinelements.forEach(element => element.style.display = "none");
+          loggedoutelements.forEach(element => element.style.display = "block");
+          </script>';
+        }
+      ?>
 </body>
 
 </html>

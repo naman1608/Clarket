@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <?php
-  session_start();
-  
-  
+  session_start();  
 ?>
 <html lang="en">
   <head>
