@@ -18,6 +18,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $_SESSION['username'] = $row['user_name'];
         $_SESSION['mobile'] = $row['mobile'];
         $_SESSION['email'] = $row['email'];
+        $_SESSION['college'] = $row['college'];
         header("location: sell2.php");
     } 
     else{

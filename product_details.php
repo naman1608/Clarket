@@ -110,7 +110,7 @@
 
             <div class="desc">
             <p class="heading1">'.$row["title"].'</p>
-            <span class="heading2">Netaji Subhas University of Technology</span>
+            <span class="heading2">'.$row["college"].'</span>
             <hr>
             <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPrice: &nbsp&nbsp<span class="price">&#8377 '.$row["price"].'- Negotiable</span></p>
             <p>&nbsp&nbspCondition: &nbsp&nbsp'.$row["product_condition"].'.</p>
