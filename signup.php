@@ -6,14 +6,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $username = $_POST["username"];
     $email_id = $_POST["emailid"];
     $mobile_number = $_POST["mobile_number"];
+    $college= $_POST["college"];
     echo $mobile_number;
     $password = $_POST["password"];
     $cpassword = $_POST["cpassword"];
     $exists=false;
    // echo $username." ".$password;
     if(($password == $cpassword) && $exists==false){
-            $sql = "INSERT INTO users (email,user_name, password,date_time, mobile)
-            VALUES ('$email_id','$username', '$password',current_timestamp(), '$mobile_number')";
+            $sql = "INSERT INTO users (email,user_name, password,date_time, mobile,college)
+            VALUES ('$email_id','$username', '$password',current_timestamp(), '$mobile_number','$college')";
             
             function redirect($url) {
               ob_start();
@@ -134,6 +135,15 @@ if(!$mail->send()) {
                   <label for="email">Email</label>
                   <input type="email" name="emailid">
                 </div>
+                <div class="field padding-bottom--24">
+                    <label for="college">College</label>
+                    <select id="college" name="college" >
+                    <option value="Netaji Subhas University of Technology">Netaji Subhas University of Technology</option>
+                    <option value="Delhi Technological University">Delhi Technological University</option>
+                    <option value="Indraprastha Institute of Information Technology Delhi">Indraprastha Institute of Information Technology Delhi</option>
+                    
+                    </option></select>
+                  </div>
                 <div class="field padding-bottom--24">
                   <div class="grid--50-50">
                     <label for="password">Set Password</label>

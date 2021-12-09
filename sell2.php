@@ -214,7 +214,7 @@
                        </div>
                        <div class="col-6 border-end border-2">
                         <p class=" fnt pb-0 mb-0">'.$row["title"].'</p>
-                        <div class="card-text pb-3 pt-0 mt-0">Netaji Subhas University Of Technology</div>
+                        <div class="card-text pb-3 pt-0 mt-0">'.$row["college"].'</div>
                         <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; '.$row["price"].' - Negotiable</div></h4>
                        </div>
                        <div class="col-3">

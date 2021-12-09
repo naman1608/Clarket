@@ -23,9 +23,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $phone = $_SESSION['mobile'];
     $seller_name = $_SESSION['username'];
     $seller_email = $_SESSION['email'];
+    $college= $_SESSION['college'];
     $filename = $_FILES["inpFile"]["name"];
     $tempname = $_FILES["inpFile"]["tmp_name"];    
         $folder = "image/".$filename;
+
+        echo $_SESSION["college"];
 
         echo $filename;
         echo $folder;
@@ -47,8 +50,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //   die();
     // }
 
-    $sql = "INSERT INTO products (category, product, title, description, price, phone, seller_name,img_name,product_condition,email)
-    VALUES ('$category','$product', '$title','$description', '$price', '$phone', '$seller_name','$filename','$condition','$seller_email')";
+    $sql = "INSERT INTO products (category, product, title, description, price, phone, seller_name,img_name,product_condition,email,college)
+    VALUES ('$category','$product', '$title','$description', '$price', '$phone', '$seller_name','$filename','$condition','$seller_email','$college')";
     if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
     //redirect("signin.php");
