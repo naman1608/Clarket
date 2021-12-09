@@ -44,7 +44,7 @@
     
 <nav class="navbar navbar-expand-lg navbar-light border border-5 shd">
       <div class="container-fluid container-lg hs">
-        <a class="navbar-brand home-heading " href="/index.php">Clarket</a>
+        <a class="navbar-brand home-heading " href="index.php">Clarket</a>
         <form class="d-flex me-auto ms-auto">
           <button class="btn btn-outline-dark" type="submit">
             <svg
@@ -92,7 +92,7 @@
         </ul>
       </div>
 
-    </nav>
+</nav>
     <div id="alert"></div>
     <div class="main_container">
         <?php

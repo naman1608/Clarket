@@ -137,10 +137,10 @@ if(!$mail->send()) {
                 </div>
                 <div class="field padding-bottom--24">
                     <label for="college">College</label>
-                    <select id="college" name="college" >
-                    <option value="Netaji Subhas University of Technology">Netaji Subhas University of Technology</option>
-                    <option value="Delhi Technological University">Delhi Technological University</option>
-                    <option value="Indraprastha Institute of Information Technology Delhi">Indraprastha Institute of Information Technology Delhi</option>
+                    <select id="college" name="college" style="color: #444444; border-radius: 4px; height: 45px; border: 1.3px solid #DEDEDE; width: 100%;" >
+                    <option value="Netaji Subhas University of Technology" style="color: #666666;">Netaji Subhas University of Technology</option>
+                    <option value="Delhi Technological University" style="color: #666666;">Delhi Technological University</option>
+                    <option value="Indraprastha Institute of Information Technology Delhi" style="color: #666666;">Indraprastha Institute of Information Technology Delhi</option>
                     
                     </option></select>
                   </div>

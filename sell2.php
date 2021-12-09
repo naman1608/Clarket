@@ -267,7 +267,7 @@
           <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
           <li class="nav-item"><a href="contact_us.php" class="nav-link px-2 text-muted" >Contact US</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About US</a></li>
+          <li class="nav-item"><a href="aboutus.html" class="nav-link px-2 text-muted">About US</a></li>
         </ul>
       </footer>
     </div>
