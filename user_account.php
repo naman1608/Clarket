@@ -1,3 +1,9 @@
+<?php
+  include 'partials/_dbconnect.php';
+  session_start(); 
+
+?>
+
 <html>
 <head>
   <meta charset="utf-8">
@@ -168,7 +174,68 @@ i{
         <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
           <h1><a href="#" rel="dofollow">CLARKET</a></h1>
         </div>
-              <div class="wrapper">
+
+        <?php
+
+        $name = $_SESSION['username'];
+        $email = $_SESSION['email'];
+        $phone = $_SESSION['mobile'];
+
+        echo $name. " ".$email." ".$phone;
+
+        echo '
+        <div class="wrapper">
+        <div class="left">
+            <img src="assets/user_img.png" 
+            alt="user" width="100">
+            <h4>'.$name.'</h4>
+             <p>Clarket Plus Customer</p>
+        </div>
+        <div class="right">
+            <div class="info">
+                <h3>Information</h3>
+                <div class="info_data">
+                     <div class="data">
+                        <h4>Email</h4>
+                        <p>'.$email.'</p>
+                     </div>
+                     <div class="data">
+                       <h4>Phone</h4>
+                        <p>'.$phone.'</p>
+                  </div>
+                </div>
+            </div>
+          
+          <div class="products">
+                <h3>Product</h3>
+                <div class="products_data">
+                     <div class="data">
+                        <h4>Recent Viewed Product</h4>
+                        <p>Boat Headphones</p>
+                     </div>
+                     <div class="data">
+                       <h4>Most Viewed Category</h4>
+                        <p>Electronics</p>
+                  </div>
+                </div>
+            </div>
+          
+            <div class="social_media">
+                <ul>
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+          </div>
+        </div>
+    </div>
+
+        ';
+        
+        
+        
+        ?>
+              <!-- <div class="wrapper">
                 <div class="left">
                     <img src="assets/user_img.png" 
                     alt="user" width="100">
@@ -212,7 +279,7 @@ i{
                       </ul>
                   </div>
                 </div>
-            </div>
+            </div> -->
           <div class="footer-link padding-top--24">
             <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
               <span><a href="#">© Clarket</a></span>
