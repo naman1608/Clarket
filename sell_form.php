@@ -1,15 +1,28 @@
 <?php
-
+ session_start(); 
 include 'partials/_dbconnect.php';
+function redirect($url) {
+  ob_start();
+  header('Location: '.$url);
+  ob_end_flush();
+  die();
+}
+
+if(!(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true)){
+  redirect("signin.php");
+  // exit;
+}
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $category = $_POST["slct1"];
     $product = $_POST["slct2"];
     $title = $_POST["adTitle"];
+    $condition = $_POST["adCondtion"];
     $description = $_POST["adDescription"];
     $price = $_POST["adPrice"];
-    $phone = $_POST["adPhone"];
-    $seller_name = $_POST["adseller"];
+    $phone = $_SESSION['mobile'];
+    $seller_name = $_SESSION['username'];
+    $seller_email = $_SESSION['email'];
     $filename = $_FILES["inpFile"]["name"];
     $tempname = $_FILES["inpFile"]["tmp_name"];    
         $folder = "image/".$filename;
@@ -18,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         echo $folder;
           $msg="";
         // Now let's move the uploaded image into the folder: image
-        if (move_uploaded_file($tempname, $folder))  {
+        if (move_uploaded_file($tempname, $folder)){
             $msg = "Image uploaded successfully";
         }else{
             $msg = "Failed to upload image";
@@ -34,8 +47,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //   die();
     // }
 
-    $sql = "INSERT INTO products (category, product, title, description, price, phone, seller_name,img_name)
-    VALUES ('$category','$product', '$title','$description', '$price', '$phone', '$seller_name','$filename')";
+    $sql = "INSERT INTO products (category, product, title, description, price, phone, seller_name,img_name,product_condition,email)
+    VALUES ('$category','$product', '$title','$description', '$price', '$phone', '$seller_name','$filename','$condition','$seller_email')";
     if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
     //redirect("signin.php");
@@ -210,20 +223,16 @@ margin: auto;
                         <input type="text" name="adTitle" required /><br />                        
                     </div>
                     <div >
+                            <label for="adCondition">Condition</label>
+                            <input type="text" name="adCondtion" required /><br />
+                    </div>
+                    <div >
                             <label for="adDescription">Description</label>
                             <input type="text" name="adDescription" required /><br />
                     </div>
                     <div>
                             <label for="adPrice">Price</label>
                             <input type="number"  name="adPrice" required /><br />
-                    </div>
-                    <div>
-                            <label for="adPhone">Phone Number</label>
-                            <input type="number" id="adPhone" name="adPhone" required /><br />
-                    </div>
-                    <div >
-                            <label for="adseller">Seller Name</label>
-                            <input type="text" name="adseller" required /><br />
                     </div>
                 <br>
                 <table>
