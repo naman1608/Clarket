@@ -113,7 +113,7 @@
             <span class="heading2">Netaji Subhas University of Technology</span>
             <hr>
             <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPrice: &nbsp&nbsp<span class="price">&#8377 '.$row["price"].'- Negotiable</span></p>
-            <p>&nbsp&nbspCondition: &nbsp&nbspBrand new with a bit of wear on one side.</p>
+            <p>&nbsp&nbspCondition: &nbsp&nbsp'.$row["product_condition"].'.</p>
             <p>Description:'.$row["description"].'</p>
             <hr>
             <div class="buttons" ><button class="cart cart1" onclick="addtocart()">Add to cart</button>
