@@ -11,7 +11,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $password = $_POST["password"];
     $cpassword = $_POST["cpassword"];
     $exists=false;
-   // echo $username." ".$password;
     if(($password == $cpassword) && $exists==false){
             $sql = "INSERT INTO users (email,user_name, password,date_time, mobile,college)
             VALUES ('$email_id','$username', '$password',current_timestamp(), '$mobile_number','$college')";
@@ -25,7 +24,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
-            // redirect("signin.php");
+            //redirect("signin.php");
             } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
             
@@ -40,24 +39,19 @@ require 'PHPMailerAutoload.php';
 
 $mail = new PHPMailer;
 
-$mail->SMTPDebug = 4;                               // Enable verbose debug output
-
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'clarketnsut@gmail.com';                 // SMTP username
-$mail->Password = 'clarket@123';                           // SMTP password
-$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587;                                    // TCP port to connect to
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true;
+$mail->Username = 'clarketnsut@gmail.com';
+$mail->Password = 'clarket@123';
+$mail->SMTPSecure = 'tls';
+$mail->Port = 587;
 
 $mail->setFrom('clarketnsut@gmail.com', 'Clarket');
-$mail->addAddress($_POST["emailid"], $_POST["username"]);     // Add a recipient               // Name is optional
-
-$mail->isHTML(true);                                  // Set email format to HTML
-
-$mail->Subject = 'Here is the subject';
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+$mail->addAddress($_POST["emailid"], $_POST["username"]);
+$mail->isHTML(true);
+$mail->Subject = 'Welcome to Clarket!';
+$mail->Body    = $mail->msgHTML(file_get_contents('template.html'));
 
 if(!$mail->send()) {
     echo 'Message could not be sent.';
@@ -114,8 +108,8 @@ if(!$mail->send()) {
           </div>
         </div>
       </div>
-      <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
-        <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+      <div class="box-root padding-top--4 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+        <div class="box-root padding-top--10 padding-bottom--24 flex-flex flex-justifyContent--center">
           <a class="navbar-brand home-heading " href="index.php">Clarket</a>
         </div>
         <div class="formbg-outer">

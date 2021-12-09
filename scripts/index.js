@@ -1,6 +1,5 @@
 // script for product details page
 function addtocart() {
-  console.log("triggered");
   var alertelement = document.getElementById('alert');
   alertelement.innerHTML =
     "<div class=\"alert alert-success\" role=\"alert\"> The item has been added to the cart! </div>"
@@ -9,7 +8,6 @@ function addtocart() {
     alertelement.innerHTML = "";
   }, 2000);
 }
-
 
 
 // script for sell form page
@@ -25,7 +23,6 @@ const previewDefaultText = previewContainer.querySelector(
 
 inpFile.addEventListener("change", function () {
   const file = this.files[0];
-  console.log(file);
 
   if (file) {
     const reader = new FileReader();
@@ -45,7 +42,6 @@ inpFile.addEventListener("change", function () {
 });
 
 function populate(s1, s2) {
-  console.log('running')
   var s1 = document.getElementById(s1);
   var s2 = document.getElementById(s2);
 
@@ -106,6 +102,7 @@ function populate(s1, s2) {
     var newOption = document.createElement("option");
     newOption.value = pair[0];
     newOption.innerHTML = pair[1];
+    newOption.style = "color: #666666";
     s2.options.add(newOption);
   }
 }

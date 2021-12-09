@@ -1,24 +1,16 @@
 <!DOCTYPE html>
-
 <head>
 
 	<title>Team Members: </title>
-	<!--JavaScript-->
 	<script>
 		function loadXMLDoc() {
 			var xmlhttp = new XMLHttpRequest();
-			console.log(xmlhttp);
 			xmlhttp.onreadystatechange = function () {
-
-				// Request finished and response
-				// is ready and Status is "OK"
 				if (this.readyState == 4 && this.status == 200) {
-					console.log("started");
 					empDetails(this);
 				}
 			};
 
-			// employee.xml is the external xml file
 			xmlhttp.open("GET", "members.xml", true);
 			xmlhttp.send();
 		}
@@ -32,9 +24,7 @@
 					<th>Roll No.</th>
 				</tr>`;
 			var x = xmlDoc.getElementsByTagName("member");
-			console.log(x);
 
-			// Start to fetch the data by using TagName
 			for (i = 0; i < x.length; i++) {
 				table += "<tr><td>" +
 					x[i].getElementsByTagName("firstname")[0]
@@ -45,13 +35,11 @@
 					.childNodes[0].nodeValue
 			}
 
-			// Print the xml data in table form
 			var tablee = document.getElementById("membertable");
-			console.log(tablee);
 			tablee.innerHTML = table;
-
 		}
 	</script>
+	
 	<style>
 		table {
 			text-align: center;
@@ -100,11 +88,10 @@
 
 		button:hover {
 			background-color: rgba(251, 114, 88, 0.1);
-			-webkit-transition-duration: 0.4s;
-			/* Safari */
 			transition-duration: 1s;
 		}
 	</style>
+
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
