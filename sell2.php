@@ -171,7 +171,7 @@
                 </div>
                 <div class="form-check p-2">
                   <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-             
+
                   <label class="form-check-label text-muted" for="flexCheckChecked">
                     Delhi Technological University
                   </label>
@@ -185,10 +185,8 @@
               </div>
             </div>
             <div class="tagArea mt-3">
-
               <p class="text-muted h5">Tags</p>
               <form class="form-inline mt-1">
-                
                 <input type="text" class="form-control" id="inlineFormInputName2" placeholder="Tags">
                 <button  class="btn bii" id="tags" type="button"><svg xmlns="http://www.w3.org/2000/svg" class="sizee" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
@@ -218,25 +216,19 @@
                         <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; '.$row["price"].' - Negotiable</div></h4>
                        </div>
                        <div class="col-3">
-                         
                         <div class="row g-0">
                           <div class="col-4 nopadding ">
-                            
                             <p class="card-text h5 pt-3 text-center ms-2">Seller :</p>
                           </div>
                           <div class="col-8 nopadding">
-                            
                             <div class="card-text text-muted pt-3 text-start ">'.$row["seller_name"].'</div>
                           </div>
                         </div>
-                        
                          <div class="container mt-4">
                           <div class="me-auto">
                             <div class="h5">Tags:</div>
                             <span class="card-text badge bg-secondary bs text-muted m-1">'.$row["category"].'</span>
                             <span class="card-text badge bg-secondary  bs text-muted m-1">'.$row["product"].'</span>
-                           
-                             
                           </div>
                           <div class=" me-auto">
                            </div>
@@ -317,7 +309,6 @@
       crossorigin="anonymous"
       ></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <!-- <script type="module" src="scripts/auth.js"></script> -->
       <?php
         if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
           $var =  $_SESSION['username'];
