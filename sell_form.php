@@ -185,12 +185,12 @@ margin: auto;
                   <div class="field padding-bottom--24">
                     <label for="slct1">Choose Product Category</label>
                     <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
-                    <option value="furniture">Furniture</option>
-                    <option value="electronics">Electronics</option>
-                    <option value="books">Books</option>
-                    <option value="beddings">Beddings</option>
-                    <option value="bathroom accessories">Bathroom Accessories</option>
-                    <option value="kitchen accessories">
+                    <option value="Furniture">Furniture</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Books">Books</option>
+                    <option value="Beddings">Beddings</option>
+                    <option value="Bathroom Accessories">Bathroom Accessories</option>
+                    <option value="Kitchen Accessories">
                         Kitchen Accessories
                     </option></select>
                   </div>
