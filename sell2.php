@@ -210,7 +210,7 @@
                   <div class="container">
                      <div class="row">
                        <div class="col-3">
-                         <img src="assets/table2.png" alt="" class="img-fluid">
+                         <img src="'.$row["img_name"].'" alt="" class="img-fluid">
                        </div>
                        <div class="col-6 border-end border-2">
                         <p class=" fnt pb-0 mb-0">'.$row["title"].'</p>

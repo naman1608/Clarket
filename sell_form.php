@@ -10,9 +10,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $price = $_POST["adPrice"];
     $phone = $_POST["adPhone"];
     $seller_name = $_POST["adseller"];
+    $filename = $_FILES["inpFile"]["name"];
+    $tempname = $_FILES["inpFile"]["tmp_name"];    
+        $folder = "image/".$filename;
+          
+        // Now let's move the uploaded image into the folder: image
+        if (move_uploaded_file($tempname, $folder))  {
+            $msg = "Image uploaded successfully";
+        }else{
+            $msg = "Failed to upload image";
+      }
    // echo $username." ".$password;
-    $sql = "INSERT INTO products (category, product, title, description, price, phone, seller_name)
-    VALUES ('$category','$product', '$title','$description', '$price', '$phone', '$seller_name')";
     
     // function redirect($url) {
     //   ob_start();
@@ -21,6 +29,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //   die();
     // }
 
+    $sql = "INSERT INTO products (category, product, title, description, price, phone, seller_name,img_name)
+    VALUES ('$category','$product', '$title','$description', '$price', '$phone', '$seller_name','$filename')";
     if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
     //redirect("signin.php");
@@ -171,7 +181,7 @@ margin: auto;
         <div class="formbg-outer">
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
-              <form id="sellForm" action="sell_form.php" method="post">
+              <form id="sellForm" action="sell_form.php" method="post" enctype=”multipart/form-data">
                   <div class="field padding-bottom--24">
                     <label for="slct1">Choose Product Category</label>
                     <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
@@ -200,7 +210,7 @@ margin: auto;
                     </div>
                     <div>
                             <label for="adPrice">Price</label>
-                            <input type="number" value="adPrice" name="adPrice" required /><br />
+                            <input type="number"  name="adPrice" required /><br />
                     </div>
                     <div>
                             <label for="adPhone">Phone Number</label>
