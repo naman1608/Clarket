@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
   session_start();  
+  
 ?>
 <html lang="en">
 
@@ -41,6 +42,23 @@
 </head>
 
 <body>
+
+<?php
+include 'partials/_dbconnect.php';
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+  $uid = $_SESSION["user_id"];
+  $pid = $_GET["product_id"];
+  $sql = "INSERT INTO `cart` (`product_id`, `user_id`) VALUES ('$pid', '$uid')";
+    if ($conn->query($sql) === TRUE) {
+    echo '<div class="alert alert-success" role="alert" style="z-index=101;"> The item has been added to the cart! </div>';
+    // redirect("signin.php");
+    } else {
+    echo '<div class="alert alert-danger" role="alert" style="z-index=101;"> The item already exists in your cart! </div>';
+    }
+}
+
+
+?>
     
 <nav class="navbar navbar-expand-lg navbar-light border border-5 shd">
       <div class="container-fluid container-lg hs">
@@ -97,7 +115,7 @@
     <div class="main_container">
         <?php
 
-            include 'partials/_dbconnect.php';
+            
 
             $id = $_GET['product_id'];
             $sql = "SELECT * FROM `products` WHERE product_id=$id"; 
@@ -114,12 +132,26 @@
             <hr>
             <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPrice: &nbsp&nbsp<span class="price">&#8377 '.$row["price"].'- Negotiable</span></p>
             <p>&nbsp&nbspCondition: &nbsp&nbsp'.$row["product_condition"].'.</p>
-            <p>Description:'.$row["description"].'</p>
-            <hr>
-            <div class="buttons" ><button class="cart cart1" onclick="addtocart()">Add to cart</button>
-                <button class="cart cart2" >Buy Now</button>
+            <p>Description: &nbsp'.$row["description"].'</p>
+            <hr>';
+
+            ?>
+            <div class="buttons" >
+              <!-- <button class="cart cart1" onclick="addtocart()">Add to cart</button> -->
+            <form method="post">
+                <input type="submit" name="button2"
+                        class="cart cart1" value="Add to Cart" />
+                <!-- <input type="submit" name="button1"
+                        class="cart cart2" value="Buy Now" /> -->
+                
+            </form>
+                <!-- <button class="cart cart2" >Buy Now</button> -->
             </div>
         </div>
+
+        <?php
+
+        echo '
         <div class="seller">
             <p class="heading3">Seller information</p>
             <p>'.$row["seller_name"].'</p>
@@ -168,6 +200,24 @@
       </div>
       <script type="module" src="scripts/auth.js"></script>
       <script src="scripts/index.js"></script>
+
+      
+
+      function addtocart() {
+
+            <!-- var ans = "<?php
+            
+
+            ?>" -->
+            <!-- console.log("triggered");
+            var alertelement = document.getElementById('alert');
+            alertelement.innerHTML =
+              "<div class=\"alert alert-success\" role=\"alert\"> The item has been added to the cart! </div>"
+            setTimeout(function () {
+              var alertelement = document.getElementById('alert');
+              alertelement.innerHTML = "";
+            }, 2000); -->
+}
       <?php
         if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
           $var =  $_SESSION['username'];
