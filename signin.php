@@ -16,6 +16,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         session_start();
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $row['user_name'];
+        $_SESSION['mobile'] = $row['mobile'];
+        $_SESSION['email'] = $row['email'];
         header("location: sell2.php");
     } 
     else{

@@ -52,7 +52,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light border border-5 shd">
       <div class="container-fluid container-lg hs">
-        <a class="navbar-brand home-heading " href="/index.php">Clarket</a>
+        <a class="navbar-brand home-heading " href="index.php">Clarket</a>
         <form class="d-flex me-auto ms-auto">
           <button class="btn btn-outline-dark" type="submit">
             <svg
@@ -210,7 +210,7 @@
                   <div class="container">
                      <div class="row">
                        <div class="col-3">
-                         <img src="'.$row["img_name"].'" alt="" class="img-fluid">
+                         <img src="image/'.$row["img_name"].'" alt="" class="img-fluid">
                        </div>
                        <div class="col-6 border-end border-2">
                         <p class=" fnt pb-0 mb-0">'.$row["title"].'</p>
@@ -239,9 +239,6 @@
                              
                           </div>
                           <div class=" me-auto">
-            
-                              <span class="card-text badge bg-secondary bs text-muted m-1">Teak</span>
-                              <!-- <span class="card-text badge bg-secondary  bs text-muted m-1">Table</span> -->
                            </div>
                           </div>
                        </div>
@@ -252,181 +249,6 @@
               }
             }
             ?>
-            <!-- <div class="card mt-3 mb-2 ms-1 me-1 shadow-sm">
-              <div class="card-body" onclick="cardclick()">
-                <div class="container">
-                   <div class="row">
-                     <div class="col-3">
-                       <img src="assets/table2.png" alt="" class="img-fluid">
-                     </div>
-                     <div class="col-6 border-end border-2">
-                      <p class=" fnt pb-0 mb-0">Woodworks Table  Polished</p>
-                      <div class="card-text pb-3 pt-0 mt-0">Netaji Subhas University Of Technology</div>
-                      <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; 1500 - Negotiable</div></h4>
-                     </div>
-                     <div class="col-3">
-                       
-                      <div class="row g-0">
-                        <div class="col-4 nopadding ">
-                          
-                          <p class="card-text h5 pt-3 text-center ms-2">Seller :</p>
-                        </div>
-                        <div class="col-8 nopadding">
-                          
-                          <div class="card-text text-muted pt-3 text-start ">Mahfooz Haque</div>
-                        </div>
-                      </div>
-                      
-                       <div class="container mt-4">
-                        <div class="me-auto">
-                          <div class="h5">Tags:</div>
-                          <span class="card-text badge bg-secondary bs text-muted m-1">Furniture</span>
-                          <span class="card-text badge bg-secondary  bs text-muted m-1">Table</span>
-                         
-                           
-                        </div>
-                        <div class=" me-auto">
-          
-                            <span class="card-text badge bg-secondary bs text-muted m-1">Teak</span>
-                            <!-- <span class="card-text badge bg-secondary  bs text-muted m-1">Table</span> -->
-                          
-                            
-                         </div>
-                         
-                        </div>
-                     </div>
-                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="card mt-3 mb-2 ms-1 me-1 shadow-sm">
-              <div class="card-body" onclick="cardclick()">
-                <div class="container">
-                   <div class="row">
-                     <div class="col-3">
-                       <img src="assets/table.jpg" alt="" class="img-fluid">
-                     </div>
-                     <div class="col-6 border-end border-2">
-                      <p class="fnt pb-0 mb-0">Woodworks Table  Polished</p>
-                      <div class="card-text pt-0 mt-0 pb-3">Netaji Subhas University Of Technology</div>
-                      <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; 1500-Negotiable</div></h4>
-                     </div>
-                     <div class="col-3">
-                       <div class="container">
-                      </div>
-                      <div class="row">
-                        <div class="col-4 nopadding ">
-                          
-                          <p class="card-text h5 pt-3 text-center ms-2">Seller :</p>
-                        </div>
-                        <div class="col nopadding">
-                          
-                          <div class="card-text text-muted pt-3 text-start ">Mahfooz Haque</div>
-                        </div>
-                      </div>
-                      
-                       <div class="container mt-4">
-                        <div class="me-auto">
-                          <div class="h5">Tags:</div>
-                          <span class="card-text badge bg-secondary bs text-muted m-1">Furniture</span>
-                          <span class="card-text badge bg-secondary  bs text-muted m-1">Table</span>
-                        
-                       
-                          <span class="card-text badge bg-secondary bs text-muted m-1">Wood</span>
-                          <span class="card-text badge bg-secondary  bs text-muted m-1">Study</span>
-                         
-                        </div>
-                     </div>
-                   </div>
-                </div>
-              </div>
-            </div>
-            </div>
-            <div class="card  mt-3 mb-2 ms-1 me-1 shadow-sm">
-              <div class="card-body" onclick="cardclick()">
-                <div class="container">
-                   <div class="row">
-                     <div class="col-3">
-                       <img src="assets/bed.jfif" alt="" class="img-fluid">
-                     </div>
-                     <div class="col-6 border-end border-2">
-                      <p class="fnt pb-0 mb-0">Godrej Double Decker bed</p>
-                      <div class="card-text pb-3 pt-0 mt-0">Indraprastha institute of Information Technology, Delhi  </div>
-                      <h4><div class="card-text badge bg-primary ms-1 mt-2 bh ">&#8377; 9800-Negotiable</div></h4>
-                     </div>
-                     <div class="col-3">
-                      <div class="row">
-                        <div class="col-4 nopadding ">
-                          
-                          <p class="card-text h5  pt-3 text-center ms-2">Seller :</p>
-                        </div>
-                        <div class="col nopadding">
-                          
-                          <div class="card-text text-muted pt-3 text-start ">Yajur Tayal</div>
-                        </div>
-                      </div>
-                       <div class="container mt-4">
-                        <div class=" me-auto">
-                          <div class="h5">Tags:</div>
-                          <span class="card-text badge bg-secondary bs text-muted m-1">Godrej</span>
-                          <span class="card-text badge bg-secondary  bs text-muted m-1">Double decker</span>
-                           
-                        </div>
-                        <div class=" me-auto">
-                          <span class="card-text badge bg-secondary bs text-muted m-1">Bed</span>
-                          <!-- <span class="card-text badge bg-secondary  bs text-muted m-1"></span> -->
-                         </div>
-                         
-                        </div>
-                     </div>
-                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="card mt-3 mb-0 ms-1 me-1 shadow-sm ">
-              <div class="card-body" onclick="cardclick()">
-                <div class="container">
-                   <div class="row">
-                     <div class="col-3">
-                       <img src="assets/chair.jfif" alt="" class="img-fluid">
-                     </div>
-                     <div class="col-6 border-end border-2">
-                      <p class="fnt pb-0 mb-0">Khimser Dining Chair</p>
-                      <div class="card-text pb-3 pt-0 mt-0">Delhi Technological University </div>
-                      <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; 3000-Negotiable</div></h4>
-                     </div>
-                     <div class="col-3">
-                      <div class="container">
-                      </div>
-                      <div class="row">
-                        <div class="col-4 nopadding ">
-                          
-                          <p class="card-text h5 pt-3 text-center ms-2">Seller :</p>
-                        </div>
-                        <div class="col nopadding">
-                          
-                          <div class="card-text text-muted pt-3 text-start ">Samad Ahmed</div>
-                        </div>
-                      </div>
-                       <div class="container mt-4">
-                        <div class="me-auto">
-                          <div class="h5">Tags:</div>
-                          <span class="card-text badge bg-secondary bs text-muted m-1">Furniture</span>
-                          <span class="card-text badge bg-secondary  bs text-muted m-1">chair</span>
-                           
-                  
- 
-                            <span class="card-text badge bg-secondary bs text-muted m-1">Wood</span>
-                            <!-- <span class="card-text badge bg-secondary  bs text-muted m-1"></span> -->
-                            
-                        
-                         
-                        </div>
-                     </div>
-                   </div>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
         </div>

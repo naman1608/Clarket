@@ -5,13 +5,15 @@ include 'partials/_dbconnect.php';
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $username = $_POST["username"];
     $email_id = $_POST["emailid"];
+    $mobile_number = $_POST["mobile_number"];
+    echo $mobile_number;
     $password = $_POST["password"];
     $cpassword = $_POST["cpassword"];
     $exists=false;
    // echo $username." ".$password;
     if(($password == $cpassword) && $exists==false){
-            $sql = "INSERT INTO users (email,user_name, password,date_time)
-            VALUES ('$email_id','$username', '$password',current_timestamp())";
+            $sql = "INSERT INTO users (email,user_name, password,date_time, mobile)
+            VALUES ('$email_id','$username', '$password',current_timestamp(), '$mobile_number')";
             
             function redirect($url) {
               ob_start();
@@ -22,7 +24,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
-            redirect("signin.php");
+            //redirect("signin.php");
             } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
             
@@ -83,7 +85,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       </div>
       <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
         <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-          <a class="navbar-brand home-heading " href="/index.html">Clarket</a>
+          <a class="navbar-brand home-heading " href="index.php">Clarket</a>
         </div>
         <div class="formbg-outer">
           <div class="formbg">
@@ -93,6 +95,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <div class="field padding-bottom--24">
                     <label for="username">Username</label>
                     <input type="text" name="username">
+                  </div>
+                  <div class="field padding-bottom--24">
+                    <label for="mobile_number">Mobile Number</label>
+                    <input type="text" name="mobile_number">
                   </div>
                 <div class="field padding-bottom--24">
                   <label for="email">Email</label>

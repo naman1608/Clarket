@@ -95,10 +95,6 @@
     </nav>
     <div id="alert"></div>
     <div class="main_container">
-        <div class="image">
-            <img src="assets/table2.png" id="img1">
-        </div>
-
         <?php
 
             include 'partials/_dbconnect.php';
@@ -108,6 +104,10 @@
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_assoc($result);
             echo '
+            <div class="image">
+              <img src="image/'.$row["img_name"].'" alt="" class="img-fluid" id="img1">
+            </div>
+
             <div class="desc">
             <p class="heading1">'.$row["title"].'</p>
             <span class="heading2">Netaji Subhas University of Technology</span>
@@ -124,7 +124,7 @@
             <p class="heading3">Seller information</p>
             <p>'.$row["seller_name"].'</p>
             <p>'.$row["phone"].'</p>
-            <p><a href="mailto:aditya@gmail.com" class="email_link">aditya@gmail.com</a></p>
+            <p><a href="mailto:'.$row["email"].'" class="email_link">'.$row["email"].'</a></p>
         </div>
             ';
 
