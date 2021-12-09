@@ -33,8 +33,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <meta charset="utf-8">
   <title>Clarket-Sign in</title>
   <link rel="stylesheet" type="text/css" href="signin.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"></head>
 
 <body>
 <?php
@@ -82,7 +83,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       </div>
       <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
         <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-          <h1><a href="http://blog.stackfindover.com/" rel="dofollow">CLARKET</a></h1>
+        <a class="navbar-brand home-heading " href="index.php">Clarket</a>
         </div>
         <div class="formbg-outer">
           <div class="formbg">
