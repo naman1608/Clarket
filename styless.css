@@ -10,6 +10,11 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+.err{
+  font-size: 1.5rem !important;
+  text-align: center !important;
+
+}
 .cardanchor {
   color: black;
   text-decoration: none;
@@ -41,7 +46,10 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 1.5rem;
   border: 3px solid #fb7258 !important;
   border-radius: 20px;
-  width: 125px;
+  width: max-content;
+}
+.pxs{
+  width:100px !important;
 }
 .cbtn:hover {
   background-color: rgba(251, 114, 88, 0.1);
@@ -288,4 +296,7 @@ input[type="number"] {
 
 .card-body {
   padding-bottom: 0px !important;
+}
+.sbtnn{
+  width:140px  !important;
 }

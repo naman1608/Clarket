@@ -50,6 +50,9 @@
     <title>Clarket</title>
   </head>
   <body>
+  <!-- <button type="button" class="btn btn-default">
+  <span class="glyphicon glyphicon-menu-down"></span>
+  </button> -->
     <nav class="navbar navbar-expand-lg navbar-light border border-5 shd">
       <div class="container-fluid container-lg hs">
         <a class="navbar-brand home-heading " href="index.php">Clarket</a>
@@ -73,9 +76,13 @@
             type="search"
             placeholder="Search for products such as Table,Fan,Books etc."
             aria-label="Search"
+            name="search"
+            method="GET"
+            action="sell2.php"
           />
+          
         </form>
-        <button class="btn nav-item cbtn me-auto" id="sell-btn">SELL</button>
+        <button class="btn nav-item cbtn me-auto sbtnn" id="sell-btn">SELL</button>
 
         <script type="text/javascript">
           document.getElementById("sell-btn").onclick = function () {
@@ -106,6 +113,7 @@
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="user_account.php">Profile</a>
                 <a class="dropdown-item" href="logout.php" id="logoutbutton">Logout</a>
+                <a class="dropdown-item" href="cart.php">My Cart</a>
               </div>
             </div>
           </li>
@@ -123,70 +131,67 @@
             <div class="container mt-4">
               
               <p class="text-muted h5">COST</p>
-              <input type="range" name="" id="cost"  min="100" max="10000" step="100">
+              <input type="range"  name="inpcst" id="cost"  min="100" max="10000" step="100">
             </div>
             <div class="container mt-5">
-              <div class="row">
-                <div class="col-6 ">
-                  <div class="container">
-                    
-                    <div class="row ">
-                      <div class="col-3 ">
-                        
-                        <p class="text-muted">Min</p>
-                      </div>
-                      <div class="col-3 ">
-                        
-                        <input type="number" name="min" id="minimum" class="wix rounded-pill" value="100">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 ">
+              <!-- <div class="row"> -->
+                
+                <!-- <div class="col-6 "> -->
                   <div class="container">
                     
                     <div class="row">
-                      <div class="col-3">
+                      <div class="col-4 justify-content-center d-flex">
                         
                         <p class="text-muted">Max</p>
                       </div>
-                      <div class="col-3">
-                        
-                        <input type="number" name="max" id="maximum" class="wix rounded-pill"  value="100">
+                      <div class="col-8">
+                        <input type="number" name="max" id="maximum" class="wix rounded-pill pxs"  value="100">
                       </div>
-                    </div>
+                    <!-- </div> -->
                   </div>
                 </div>
-              </div>
+              <!-- </div> -->
             </div>
             <div class="container mt-4">
               <p class="text-muted h5">College</p>
               <div class="container ms-4">
                 
+                <form  class="frm">
                 <div class="form-check p-2">
-                  <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
-                  <label class="form-check-label text-muted" for="flexCheckDefault">
-                    Netaji Subhas University of Technology
-                  </label>
-                </div>
-                <div class="form-check p-2">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
 
-                  <label class="form-check-label text-muted" for="flexCheckChecked">
-                    Delhi Technological University
-                  </label>
-                </div>
-                <div class="form-check p-2">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                  <label class="form-check-label text-muted" for="flexCheckChecked">
-                    IIITD
-                  </label>
-                </div>
+                    <input class="form-check-input " type="radio" name="calg" value="NSUT" id="flexCheckDefault" >
+                    <label class="form-check-label text-muted" for="flexCheckDefault" checked >
+                      <!-- <a href="sell2.php?college=NSUT"> -->
+                        
+                        Netaji Subhas University of Technology
+                        <!-- </a> -->
+                      </label>
+                    </div>
+                    <div class="form-check p-2">
+                      <input class="form-check-input" type="radio"  name="calg" value="DTU" id="flexCheckChecked" >
+                      
+                      <label class="form-check-label text-muted" for="flexCheckChecked">
+                        <!-- <a href="sell2.php?college=DTU" class="lm"> -->
+                          Delhi Technological University
+                          <!-- </a> -->
+                        </label>
+                      </div>
+                      <div class="form-check p-2">
+                        <input class="form-check-input" type="radio"  name="calg" value="IIITD" id="flexCheckChecked" >
+                        <label class="form-check-label text-muted" for="flexCheckChecked" >
+                          <!-- <a href="sell2.php?college=IIITD" class="lm"> -->
+                            IIITD
+                            <!-- </a> -->
+                          </label>
+                        </div>
+                  </form>
               </div>
             </div>
             <div class="tagArea mt-3">
+
               <p class="text-muted h5">Tags</p>
               <form class="form-inline mt-1">
+                
                 <input type="text" class="form-control" id="inlineFormInputName2" placeholder="Tags">
                 <button  class="btn bii" id="tags" type="button"><svg xmlns="http://www.w3.org/2000/svg" class="sizee" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
@@ -195,14 +200,20 @@
               <div class="dpp"></div>
             </div>
           </div>
-          <div class="col-10 col-md-9 scrl">            
+          <div class="col-10 col-md-9 scrl"> 
+                   
             <?php
             include 'partials/_dbconnect.php';
+            if(!isset($_GET['search'])){
             $sql = "SELECT * FROM `products`";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
               while($row = $result->fetch_assoc()) {
-                echo '<a class="cardanchor" href="product_details.php?product_id='.$row["product_id"].'" style="text-decoration: none">
+                $clg="";
+                if($row["college"][0]=="N")$clg="NSUT";
+                else if($row["college"][0]=="D")$clg="DTU";
+                else $clg="IIITD";
+                echo '<a class="cardanchor crdprd '.$clg.' " href="product_details.php?product_id='.$row["product_id"].'" style="text-decoration: none" data-price="'.$row["price"].'>
                 <div class="card mt-3 mb-2 ms-1 me-1 shadow-sm">
                 <div class="card-body" onclick="cardclick()">
                   <div class="container">
@@ -216,19 +227,25 @@
                         <h4><div class="card-text badge bg-primary ms-1 mt-2 bh">&#8377; '.$row["price"].' - Negotiable</div></h4>
                        </div>
                        <div class="col-3">
+                         
                         <div class="row g-0">
                           <div class="col-4 nopadding ">
+                            
                             <p class="card-text h5 pt-3 text-center ms-2">Seller :</p>
                           </div>
                           <div class="col-8 nopadding">
+                            
                             <div class="card-text text-muted pt-3 text-start ">'.$row["seller_name"].'</div>
                           </div>
                         </div>
+                        
                          <div class="container mt-4">
                           <div class="me-auto">
                             <div class="h5">Tags:</div>
                             <span class="card-text badge bg-secondary bs text-muted m-1">'.$row["category"].'</span>
                             <span class="card-text badge bg-secondary  bs text-muted m-1">'.$row["product"].'</span>
+                           
+                             
                           </div>
                           <div class=" me-auto">
                            </div>
@@ -240,7 +257,73 @@
               </div></a>';
               }
             }
+          }
+          else{
+           
+            $ress=$_GET['search'];
+            $sql = "SELECT * FROM `products` where title like '%$ress%' or `description` like '%$ress%'";
+            $result = $conn->query($sql);
+            $rowcnt=mysqli_num_rows($result);
+            if($rowcnt>0){
+              while($row=$result->fetch_assoc()){
+                $clg="";
+                if($row["college"][0]=="N")$clg="NSUT";
+                else if($row["college"][0]=="D")$clg="DTU";
+                else $clg="IIITD";
+                echo '<a class="cardanchor crdprd '.$clg.' "  href="product_details.php?product_id='.$row["product_id"].'" style="text-decoration: none" data-price="'.$row["price"].'">
+                <div class="card mt-3 mb-2 ms-1 me-1 py-3 shadow-sm">
+                <div class="card-body" onclick="cardclick()">
+                  <div class="container">
+                     <div class="row">
+                       <div class="col-3">
+                         <img src="image/'.$row["img_name"].'" alt="" class="img-fluid">
+                       </div>
+                       <div class="col-6 border-end border-2">
+                        <p class=" fnt pb-0 mb-0">'.$row["title"].'</p>
+                        <div class="card-text pb-3 pt-0 mt-0 "  >'.$row["college"].'</div>
+                        <h4><div class="card-text badge bg-primary  ms-1 mt-2 bh" id="prc">&#8377; '.$row["price"].' - Negotiable</div></h4>
+                       </div>
+                       <div class="col-3">
+                         
+                        <div class="row g-0">
+                          <div class="col-4 nopadding ">
+                            
+                            <p class="card-text h5 pt-3 text-center ms-2">Seller :</p>
+                          </div>
+                          <div class="col-8 nopadding">
+                            
+                            <div class="card-text text-muted pt-3 text-start ">'.$row["seller_name"].'</div>
+                          </div>
+                        </div>
+                        
+                         <div class="container mt-4">
+                          <div class="me-auto">
+                            <div class="h5">Tags:</div>
+                            <span class="card-text badge bg-secondary bs text-muted m-1">'.$row["category"].'</span>
+                            <span class="card-text badge bg-secondary  bs text-muted m-1">'.$row["product"].'</span>
+                           
+                             
+                          </div>
+                          <div class=" me-auto">
+                           </div>
+                          </div>
+                       </div>
+                     </div>
+                  </div>
+                </div>
+              </div></a>';
+              }
+            }
+            else{
+              
+              echo "<div class='text-muted ' style='font-size: 1.5rem ;
+              text-align: center;'>Search results for <em>' $ress '</em> not found</div>";
+            }
+              }
+            
+          
             ?>
+            
           </div>
         </div>
         </div>
@@ -263,7 +346,41 @@
         </ul>
       </footer>
     </div>
-    <script>
+    <?php
+         
+      ?>      
+      <script>
+      
+        // filter for college
+        let rs=document.getElementsByClassName('form-check-input');
+        for(let i=0;i<rs.length;i++){
+        rs[i].addEventListener('click',eval);
+        // rs[i].addEventListener('click',setCost);
+        }
+        function eval(){
+          let rd=document.getElementsByClassName('form-check-input');
+       for(let i=0;i<rd.length;i++){
+          let max=document.getElementById('#maximum');
+         if(rd[i].checked){
+           let divs=document.getElementsByClassName('cardanchor');
+           for(let j=0;j<divs.length;j++){
+             if(!divs[j].classList.contains(rd[i].value)){
+               divs[j].style.display="none";
+             }
+            
+             else {
+               divs[j].style.display="block";
+               if(parseInt(divs[j].getAttribute('data-price'))>parseInt(max.value)){
+               divs[j].style.display="none";
+             }
+             }
+           }
+
+         }
+         else console.log("false");
+       }
+        }
+     
       let tags=document.querySelector('#tags');
       function addtag(){
         window.onscroll=function (){};
@@ -280,12 +397,21 @@
       let cst=document.querySelector('#cost');
       function setCost(){
         let cst=document.querySelector('#cost');
-        let min=document.querySelector('#minimum');
         let max=document.querySelector('#maximum');
-        min.value=cst.value;
         max.value=cst.value;
+           // filter with price
+        let bs=document.getElementsByClassName('cardanchor');
+         for(let i=0;i<bs.length;i++){
+          console.log("prices are "+bs[i].getAttribute('data-price')+"cst is"+ cst.value);
+             if(parseInt(bs[i].getAttribute('data-price'))<=parseInt(max.value)){
+               bs[i].style.display="block";
+               
+             }
+             else bs[i].style.display="none";
+         }
       }
       cst.addEventListener('mousemove',setCost);
+      // cst.addEventListener('mousemove',eval);
     </script>
     <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -309,6 +435,7 @@
       crossorigin="anonymous"
       ></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!-- <script type="module" src="scripts/auth.js"></script> -->
       <?php
         if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
           $var =  $_SESSION['username'];
